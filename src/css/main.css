@@ -17,6 +17,9 @@ body{
   -ms-use-select: none;
   user-select: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -172,8 +175,9 @@ html {
   /* outline: 1px dotted red; */
 }
 .aboutMe_main {
-  display: flex; gap: 80px;
-  justify-content: center; align-items: center;
+  width: 100%;
+  display: flex; 
+  justify-content: space-evenly; align-items: center;
   /* outline: 1px dotted red; */
 }
 h3.title {
@@ -266,9 +270,6 @@ h3.title.change:hover {
   width: 100%;
   display: none; opacity: 0;
 }
-.aboutMe_skills.show {
-  display: block; opacity: 1;
-}
 .skills_wrap {
   width: 100%;
   display: flex; justify-content: space-around; align-items: center;
@@ -300,35 +301,6 @@ h3.title.change:hover {
   text-align: center; font-size: 20px;
   color: #393E46;
   /* outline: 1px dotted red; */
-}
-.show {
-  display: block; opacity: 1;
-  animation: classShow;
-  animation-duration: 0.5s;
-}
-.hide {
-  display: none; opacity: 0;
-  animation: classHide;
-  animation-duration: 0.5s;
-
-}
-@keyframes classHide {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-@keyframes classShow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 
@@ -424,21 +396,23 @@ h3.title.change:hover {
 }
 
 
+
 #myDesign {
+  position: relative;
   width: 100%; height: 100vh;
   display: flex; align-items: center; justify-content: center;
   /* outline: 1px dotted red; */
 }
 .myDesign {
   width: 80%; height: 100%;  margin-right: 100px; 
-  display: flex; flex-direction: row-reverse;
+  display: flex; flex-direction: row;
   justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
 .myDesign h2 {
-  padding: 30px 0 30px 40px; box-sizing: border-box;
-  font-size: 55px; font-weight: bold; text-align: right;
-  border-left: 1px solid #000;
+  padding: 30px 40px 30px 0; box-sizing: border-box;
+  font-size: 55px; font-weight: bold; text-align: left;
+  border-right: 1px solid #000;
   /* outline: 1px dotted red; */
 } 
 .myDesign .myDesign_wrap {
@@ -453,86 +427,216 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .myDesign_inner .contents {
-  border-radius: 2px;
+  width:250px; height: 250px;
+  border-radius: 10px;
   display: flex; justify-content: center; align-items: center;
   overflow: hidden;
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(100%);
+  background-color: #000;
+  cursor: pointer;
 }
 .myDesign_inner .contents:hover {
-  filter: grayscale(0);
-  border: 3px solid #393E4650; box-sizing: border-box;
+  filter: grayscale(0%);
 }
 .myDesign_content1 {
-  width: 450px; height: 200px;
-  background-image: url(../img/myDesign/1200x250_국세청.png);
-  background-position: 50% 0;
-  /* outline: 1px dotted red; */
+  background-image: url(../img/myDesign/400x400_국세청.png);
 }
 .myDesign_content2 {
-  width: 300px; height: 200px;
-  background-image: url(../img/myDesign/600x150_국세청.png);
-  background-position: 60% 0;
-  /* outline: 1px dotted red; */
+  background-image: url(../img/myDesign/400x400_스즈키.png);
 }
 .myDesign_content3 {
-  width: 350px; height: 200px;
-  background-image: url(../img/myDesign/400x400_국세청.png);
-  background-position: 50% 10%;
-  /* outline: 1px dotted red; */
+  background-image: url(../img/myDesign/400x400_농협.png);
 }
 .myDesign_content4 {
-  width: 350px; height: 200px;
-  background-image: url(../img/myDesign/600x150_스즈키.png);
-  background-position: 65% 0;
-  /* outline: 1px dotted red; */
+  background-image: url(../img/myDesign/600x1000_축제배너.png);
 }
-.myDesign_content5 {
-  width: 450px; height: 200px;
-  background-image: url(../img/myDesign/1200x250_스즈키.png);
-  background-position: 0 0;
-  /* outline: 1px dotted red; */
+.myDesign_content5{
+  background-image: url(../img/myDesign/2560x423_유투브배너.png);
 }
 .myDesign_content6 {
-  width: 300px; height: 200px;
-  background-image: url(../img/myDesign/400x400_스즈키.png);
-  background-position: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content7 {
-  width: 350px; height: 200px;
-  background-image: url(../img/myDesign/600x150_농협.png);
-  background-position: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content8 {
-  width: 300px; height: 200px;
-  background-image: url(../img/myDesign/400x400_농협.png);
-  background-position: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content9 {
-  width: 450px; height: 200px;
-  background-image: url(../img/myDesign/1200x250_농협.png);
-  background-position: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content10 {
-  width: 300px; height: 200px;
-  background-image: url(../img/myDesign/600x1000_축제배너.png);
-  background-position: 50% 13%;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content11 {
-  width: 500px; height: 200px;
-  background-image: url(../img/myDesign/2560x423_유투브배너.png);
-  background-position: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_content12 {
-  width: 300px; height: 200px;
   background-image: url(../img/myDesign/1000x800_배달배너.png);
-  background-position: center;
+}
+
+.myDesign_modal {
+  display: none; opacity: 0;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #00000050;
+}
+.myDesign_modal .modalBox {
+  padding: 30px;
+  position: absolute; 
+  top: 50%; left: 50%; z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 70%; height: 80%;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.modalBox.content1 {
+  display: flex; 
+  justify-content: center; align-items: center; gap: 30px;
   /* outline: 1px dotted red; */
+  .imgBox {
+    width: 60%; height: 100%; overflow: auto;
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+    img:nth-of-type(2) {
+      width: 600px;
+    }
+    img:nth-of-type(3) {
+      width: 400px;
+    }
+  }
+  .textBox {
+    text-align: center;
+    width: 35%;
+    /* outline: 1px dotted red; */
+    /* background: yellow; */
+  }
+}
+.modalBox.content2  {
+  display: flex; 
+  justify-content: center; align-items: center; gap: 30px;
+  /* outline: 1px dotted red; */
+  .imgBox {
+    width: 60%; height: 100%; overflow: auto;
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+    img:nth-of-type(2) {
+      width: 600px;
+    }
+    img:nth-of-type(3) {
+      width: 400px;
+    }
+  }
+  .textBox {
+    text-align: center;
+    width: 35%;
+    /* outline: 1px dotted red; */
+    /* background: yellow; */
+  }
+}
+.modalBox.content3  {
+  display: flex; 
+  justify-content: center; align-items: center; gap: 30px;
+  /* outline: 1px dotted red; */
+  .imgBox {
+    width: 60%; height: 100%; overflow: auto;
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+    img:nth-of-type(2) {
+      width: 600px;
+    }
+    img:nth-of-type(3) {
+      width: 400px;
+    }
+  }
+  .textBox {
+    text-align: center;
+    width: 35%;
+    /* outline: 1px dotted red; */
+    /* background: yellow; */
+  }
+}
+.modalBox.content4  {
+  display: flex;
+  justify-content: center; align-items: center; gap: 50px;
+  /* outline: 1px dotted red; */
+  .imgBox {
+    width: 33%;
+    display: flex; justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+  }
+  .textBox {
+    text-align: center;
+    width: 35%;
+    /* outline: 1px dotted red; */
+    /* background: yellow; */
+  }
+}
+.modalBox.content5  {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 30px;
+  /* outline: 1px dotted red; */
+  .imgBox {
+    width: 100%; height: 50%;
+    display: flex; justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+  }
+  .textBox {
+    text-align: center;
+    width: 70%;
+    /* outline: 1px dotted red; */
+    /* background: yellow; */
+  }
+}
+.modalBox.content6  {
+  display: flex; 
+  justify-content: center; align-items: center; gap: 30px;
+  /* outline: 1px dotted red; */
+  .imgBox {
+    width: 60%; 
+    display: flex; justify-content: center; align-items: center;
+    /* outline: 1px dotted red; */
+  }
+  .textBox {
+    text-align: center;
+    width: 40%;
+    /* background: yellow; */
+  }
+}
+.modalBox .imgBox img {
+  display: block; width: 100%;
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+.modalBox .textBox h4 {
+  padding: 20px 0 20px;
+  font-size: 25px;
+}
+.modalBox .textBox p.size {
+  padding: 10px 0;
+  font-size: 18px;
+}
+.modalBox .textBox p.explanation {
+  padding: 10px 0 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.show {
+  display: block; opacity: 1;
+  animation: classShow;
+  animation-duration: 0.5s;
+}
+.hide {
+  display: none; opacity: 0;
+  animation: classHide;
+  animation-duration: 0.5s;
+}
+@keyframes classHide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes classShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

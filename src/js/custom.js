@@ -69,19 +69,6 @@ h3El.addEventListener('click',()=>{
   aboutMe_skills.classList.toggle('show');
 })
 
-/* aboutMe btn click */
-/* const more_btn = document.querySelector('.btn__more')
-const another_btn = document.querySelector('.btn__another')
-const more = document.querySelector('.more')
-const another = document.querySelector('.another')
-
-more_btn.addEventListener('click',()=>{
-  more.classList.toggle('show');
-})
-another_btn.addEventListener('click',()=>{
-  another.classList.toggle('show');
-}) */
-
 /* swiper */
 var swiper = new Swiper(".myWorkSwiper", {
   direction: "vertical",
@@ -100,3 +87,55 @@ var swiper1 = new Swiper(".myDesignSwiper", {
     clickable: true
   },
 });
+
+/* myDesign */
+const content1 = document.querySelector('.myDesign_content1')
+const content2 = document.querySelector('.myDesign_content2')
+const content3 = document.querySelector('.myDesign_content3')
+const content4 = document.querySelector('.myDesign_content4')
+const content5 = document.querySelector('.myDesign_content5')
+const content6 = document.querySelector('.myDesign_content6')
+
+const modal1 = document.querySelector('.content1')
+const modal2 = document.querySelector('.content2')
+const modal3 = document.querySelector('.content3')
+const modal4 = document.querySelector('.content4')
+const modal5 = document.querySelector('.content5')
+const modal6 = document.querySelector('.content6')
+
+content1.addEventListener('click',()=>{
+  modal1.classList.toggle('show');
+})
+modal1.addEventListener('click',()=>{
+  modal1.classList.toggle('show');
+})
+content2.addEventListener('click',()=>{
+  modal2.classList.toggle('show');
+})
+modal2.addEventListener('click',()=>{
+  modal2.classList.toggle('show');
+})
+content3.addEventListener('click',()=>{
+  modal3.classList.toggle('show');
+})
+modal3.addEventListener('click',()=>{
+  modal3.classList.toggle('show');
+})
+content4.addEventListener('click',()=>{
+  modal4.classList.toggle('show');
+})
+modal4.addEventListener('click',()=>{
+  modal4.classList.toggle('show');
+})
+content5.addEventListener('click',()=>{
+  modal5.classList.toggle('show');
+})
+modal5.addEventListener('click',()=>{
+  modal5.classList.toggle('show');
+})
+content6.addEventListener('click',()=>{
+  modal6.classList.toggle('show');
+})
+modal6.addEventListener('click',()=>{
+  modal6.classList.toggle('show');
+})
