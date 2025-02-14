@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제_레이아웃_아이디비밀번호찾기</title>
+    <link rel="stylesheet" href="./css/forgot.css">
+</head>
+<body>
+    <div id="all" class="clearFix">
+        <header id="header" class="inner clearFix">
+            <div class="contact clearFix">
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./join.html">Join</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <h2><a href="./index.html">DCODELAB</a></h2>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">DEPARTMENT</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">YOUTUBE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">LOCATION</a></li>
+                </ul>
+            </div>
+        </header>
+        </div>
+        <hr>
+
+        <div id="container" class="inner">
+          <div class="inner_in">
+            <div class="idforgot">
+              <h3>아이디 찾기</h3>
+              <p class="Q">
+                아이디를 잊으셨습니까
+                Forgot your ID?<br><br>
+                <span>
+                  ※ 내용 작성 후 확인버튼을 누르시면 찾으신 아이디가 나옵니다.
+                </span>
+              </p>
+              <div class="findID">
+                <p>이름 Name</p>
+                <input type="text" placeholder="가입한 이름 한글/영문으로 입력">
+                <p>핸드폰번호 Phone Number</p>
+                <input type="text" placeholder="가입 시 작성한 핸드폰 번호 -없이 입력해주세요." maxlength="11">
+                <button onclick="alert('고객님의 아이디는 XXXX입니다.')"><a href="#" class="btn">확인</a></button>
+              </div>
+            </div>
+            <div class="pwforgot">
+              <h3>비밀번호 찾기</h3>
+              <p class="Q">
+                비밀번호를 잊으셨습니까
+                Forgot your Password?<br><br>
+                <span>
+                  ※ 내용 작성 후 확인버튼을 누르시면 새로운 비밀번호로 변경이 가능합니다.
+                </span>
+              </p>
+              <div class="findPw">
+                <p>이름 Name</p>
+                <input type="text" placeholder="가입한 이름 한글/영문으로 입력">
+                <p>아이디 ID</p>
+                <input type="text" placeholder="가입한 ID 3~15자 영문,숫자">
+                <p>핸드폰번호 Phone Number</p>
+                <input type="text" placeholder="가입 시 작성한 핸드폰 번호 -없이 입력해주세요." maxlength="11">
+                <button onclick="alert('고객님의 가입된 이메일로 비밀번호를 변경할 수 있는 주소가 전송되었습니다.')"><a href="#">확인</a></button>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="btn">
+            <a href="./join.html" class="cancel">회원가입</a>
+            <a href="./login.html" class="next">로그인</a>
+        </div>
+        </div>
+
+
+        <footer id="footer">
+          <div class="inner clearFix">
+              <div class="title">
+                      <h3>DCODELAB</h3>
+                      <ul>
+                          <li><a href="#">Policy</a></li>
+                          <li><a href="#">Terms</a></li>
+                          <li><a href="#">Family Site</a></li>
+                          <li><a href="#">Sitemap</a></li>
+                      </ul>
+              </div>
+              <div class="address">
+              <address>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dicta.
+                  <br>TEL : 031-111-1234 C.P : 010-1234-5678
+              </address>
+              <small>
+                  2020 DOCDELAB &copy; copyright all right reserved.
+              </small>
+              </div>
+          </footer>
+        </body>

@@ -1,0 +1,538 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body{
+  font-family: 'SUIT-Regular';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.bar-ing {
+  position: fixed;
+  top: 10px; left: 0; z-index: 1;
+  width: 100%; height: 5px;
+  border: 4px solid #393E46;
+  box-sizing: border-box;
+}
+.container {
+  display: flex; justify-content: center; align-items: center;
+}
+
+
+
+/* HEADER */
+#Big_header {
+  background: #fbfbfb;
+  /* outline: 1px dotted red; */
+}
+#header {
+  position: fixed;
+  top: 50px; right: 20px;
+  z-index: 1;
+}
+#header .title a {
+  position: relative;
+  /* outline: 2px dotted red; */
+}
+#header .title a img{
+  transition: .5s;
+}
+#header .title a img:hover {
+  transform: scale(1.2);
+  /* outline: 2px dotted red; */
+}
+#header nav ul {
+  display: flex; flex-direction: column; gap: 100px;
+  margin-top: 200px;
+  /* outline: 2px dotted red; */
+}
+#header nav ul li {
+  position: relative;
+  text-align: right; 
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 25px #393E46;
+  transition: .3s;
+}
+#header nav ul li:hover {
+  font-weight: bold;
+  text-shadow: none;
+}
+@media screen and (max-width : 1025px) {
+  .bar-ing {
+    background: #fff;
+  }
+  #header {
+    position: fixed;
+    top: 35px; left: 20px;
+    z-index: 1;
+  }
+  #header .title a div {
+    width: 80px; height: 80px;
+    top: -25px; right: 15px;
+  }
+  #header nav ul {
+    display: flex; flex-direction: row; 
+    justify-content: center; align-items: center;
+    margin-top: 30px;
+    /* outline: 2px dotted red; */
+  }
+  #header nav ul li {
+    flex: 1;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width : 610px) {
+  #header nav ul {
+    display: flex; gap: 50px;
+    justify-content: center; align-items: flex-end;
+    margin-top: 30px;
+    /* outline: 2px dotted red; */
+  }
+  #header nav ul li {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width : 450px) {
+  #header nav ul {
+    display: flex; gap: 10px; flex-direction: column;
+    justify-content: center; align-items: flex-end;
+    margin-top: 70px;
+    position: absolute;
+    top: -20px; right: 0;
+    /* outline: 2px dotted red; */
+  }
+  #header nav ul li {
+    font-size: 1rem;
+  }
+}
+
+/* MAIN */
+#main {
+  width: 100%; height: 100vh;
+  overflow: hidden;
+  /* outline: 1px dotted red; */
+}
+
+#main h1 {
+  font-size: 100px;
+  position: absolute; 
+  top: 50%; transform: translate(0, -50%);
+  z-index: -1;
+  color: #efefef60;
+  font-weight: bold;
+  /* outline: 1px dotted red; */
+}
+.main {
+  height: 100%;
+  justify-content: start;
+  /* outline: 1px dotted red; */
+}
+.text_box{
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+.text_box .text {
+  font-size: 8em;
+  font-weight: bold;
+}
+.blink {
+  animation: blink 0.3s infinite;
+  font-size: 9rem;
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+/* AboutMe_new */
+#aboutMe {
+  width: 100%; height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+}
+.aboutMe_container {
+  width: 80%; height: 100%; 
+  margin-right: 100px;
+  position: relative;
+  display: flex; flex-direction: column; gap: 150px;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.aboutMe_main {
+  display: flex; gap: 80px;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+h3.title {
+  width: 100%; margin-bottom: 50px;
+  text-align: center;
+  font-size: 60px;
+  /* outline: 1px dotted red; */
+}
+h3.title.change {
+/*   position: absolute; 
+  top: 50px; left: 30px; */
+  text-align-last: left;
+  color: #444;
+  transition: 1s;
+  /* outline: 1px dotted red; */
+}
+h3.title.change:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.title_div {
+  position: absolute;
+  top: calc(50% - 90px); left: calc(80% - 30px);
+  width: 100px; height: 100px;
+  padding: 5px; box-sizing: border-box;
+  border-radius: 50%;
+  background: #000; color: #fff;
+  text-align: center; line-height: 90px;
+  cursor: pointer; transition: 1s;
+  animation: bounce 0.5s 0.1s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
+}
+@keyframes bounce{
+  to{
+      transform: translateY(-30px);
+  }
+}
+.subTitle {
+  display: none; opacity: 0;
+/*   position: absolute;
+  top: 150px; left: 40px; */
+  font-size: 20px; line-height: 2;
+  color: #5f5f5f;
+}
+
+.mine_wrap {
+  display: none; opacity: 0;
+  /* outline: 1px dotted red; */
+}
+.basic_mine {
+  padding: 0 30px;
+  display: flex; flex-direction: row-reverse;
+  justify-content: center; align-items: center; gap: 80px;
+  /* outline: 1px dotted green; */
+}
+.basic_mine .photo img {
+  width: 180px; border-radius: 5px;
+}
+.basic_mine .text {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  height: 300px;
+  /* outline: 1px dotted red; */
+}
+.basic_mine .text .name.ko {
+  font-size: 3rem;
+  text-align: right;
+  /* outline: 1px dotted red; */
+}
+.basic_mine .text  .name.en {
+  margin-bottom: 50px;
+}
+.basic_mine .text .contact {
+  margin: 0 auto;
+  display: flex; gap: 30px;
+  /* outline: 1px dotted red; */
+}
+.basic_mine .text .contact div p a {
+  width: 80px; height: 80px;
+  /* border: 1px solid #000; */ border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; color: #393E46;
+  transition: .5s;
+  /* outline: 1px dotted red; */
+}
+.basic_mine .text .contact div p a:hover {
+  background: #393E4690; color: #fff;
+}
+.aboutMe_skills {
+  width: 100%;
+  display: none; opacity: 0;
+}
+.aboutMe_skills.show {
+  display: block; opacity: 1;
+}
+.skills_wrap {
+  width: 100%;
+  display: flex; justify-content: space-around; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.skills_wrap h4 {
+  width: 100%; padding: 5px 0; margin-bottom: 20px;
+  border-top: 1px solid #393E4620;
+  border-bottom: 2px solid #393E4650;
+  border-radius: 5px;
+  font-size: 20px; text-align: center;
+  /* outline: 1px dotted red; */
+}
+.skills_wrap .skills_inner {
+  display: flex;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.skills_wrap .skills_inner .skill {
+  padding: 10px;
+  /* outline: 1px dotted red; */
+}
+.skills_wrap .skill img {
+  margin: 0 auto 10px; display: block;
+  width: 50px;
+  /* outline: 1px dotted red; */
+}
+.skills_wrap .skill p {
+  text-align: center; font-size: 20px;
+  color: #393E46;
+  /* outline: 1px dotted red; */
+}
+.show {
+  display: block; opacity: 1;
+  animation: classShow;
+  animation-duration: 0.5s;
+}
+.hide {
+  display: none; opacity: 0;
+  animation: classHide;
+  animation-duration: 0.5s;
+
+}
+@keyframes classHide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes classShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+#myWork {
+  width: 100%; height: 100vh;
+  display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.myWork {
+  width: 80%; margin-right: 100px;
+  overflow: hidden;
+  display: flex; flex-direction: row; 
+  justify-content: center; align-items: center; gap: 40px;
+  box-sizing: border-box;
+  /* outline: 1px dotted red; */
+}
+.myWork h2 {
+  padding: 30px 40px 30px 0; box-sizing: border-box;
+  border-right: 1px solid #393E46;
+  font-size: 55px; font-weight: bold; text-align: left;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper {
+  height: 100%;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide {
+  text-align: center;
+  /* outline: 1px dotted green; */
+}
+.myWork .swiper-slide .swiper-slide-inner {
+  width: 100%; height: 100%;
+  display: flex; gap: 20px;
+  justify-content: flex-start; align-items: center;
+  /* outline: 1px dotted blue; */
+}
+.myWork .swiper-slide-inner .slide__img{
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__img img{
+  width: 700px;
+  display: inline-block;
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__text {
+  width: 450px; margin-right: 30px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; 
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner {
+  width: 80%;
+  /* outline: 1px dotted blue; */
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+  margin-bottom: 50px;
+  font-size: 30px; 
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+.myWorkSwiper .swiper-pagination {
+  /* outline: 1px dotted red; */
+}
+.myWorkSwiper .swiper-pagination-bullet {
+  width: 14px; height: 14px;
+  color: #393E46;
+  background-color: #393E46; 
+}
+.myWork .slide__text-inner .btn {
+  display: flex; gap: 20px;
+  align-items: center; justify-content: center;
+  /* outline: 1px dotted red; */
+}
+.myWork .slide-btn {
+  width: 140px; padding: 7px 0;
+  background-color: #fff; border: none; outline: none;
+  border-top: 1px solid #393E4640;
+  border-bottom: 2px solid #393E4680;
+  border-radius: 5px;
+  font-size: 15px; cursor: pointer;
+}
+.slide-btn:hover {
+  background: #ececec; color: #222;
+}
+
+
+#myDesign {
+  width: 100%; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign {
+  width: 80%; height: 100%;  margin-right: 100px; 
+  display: flex; flex-direction: row-reverse;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign h2 {
+  padding: 30px 0 30px 40px; box-sizing: border-box;
+  font-size: 55px; font-weight: bold; text-align: right;
+  border-left: 1px solid #000;
+  /* outline: 1px dotted red; */
+} 
+.myDesign .myDesign_wrap {
+  flex: 4; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_wrap .myDesign_inner {
+  height: 90%;
+  display: flex; gap: 10px;  flex-wrap: wrap;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_inner .contents {
+  border-radius: 2px;
+  display: flex; justify-content: center; align-items: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.myDesign_inner .contents:hover {
+  filter: grayscale(0);
+  border: 3px solid #393E4650; box-sizing: border-box;
+}
+.myDesign_content1 {
+  width: 450px; height: 200px;
+  background-image: url(../img/myDesign/1200x250_국세청.png);
+  background-position: 50% 0;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content2 {
+  width: 300px; height: 200px;
+  background-image: url(../img/myDesign/600x150_국세청.png);
+  background-position: 60% 0;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content3 {
+  width: 350px; height: 200px;
+  background-image: url(../img/myDesign/400x400_국세청.png);
+  background-position: 50% 10%;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content4 {
+  width: 350px; height: 200px;
+  background-image: url(../img/myDesign/600x150_스즈키.png);
+  background-position: 65% 0;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content5 {
+  width: 450px; height: 200px;
+  background-image: url(../img/myDesign/1200x250_스즈키.png);
+  background-position: 0 0;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content6 {
+  width: 300px; height: 200px;
+  background-image: url(../img/myDesign/400x400_스즈키.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content7 {
+  width: 350px; height: 200px;
+  background-image: url(../img/myDesign/600x150_농협.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content8 {
+  width: 300px; height: 200px;
+  background-image: url(../img/myDesign/400x400_농협.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content9 {
+  width: 450px; height: 200px;
+  background-image: url(../img/myDesign/1200x250_농협.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content10 {
+  width: 300px; height: 200px;
+  background-image: url(../img/myDesign/600x1000_축제배너.png);
+  background-position: 50% 13%;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content11 {
+  width: 500px; height: 200px;
+  background-image: url(../img/myDesign/2560x423_유투브배너.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
+.myDesign_content12 {
+  width: 300px; height: 200px;
+  background-image: url(../img/myDesign/1000x800_배달배너.png);
+  background-position: center;
+  /* outline: 1px dotted red; */
+}
