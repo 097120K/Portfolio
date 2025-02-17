@@ -397,7 +397,53 @@ h3.title.change:hover {
   background: #393E46;
 }
 
+#myDesign {
+  width: 100%; height: 150vh;
+  display: flex; align-items: center; justify-content: center;
+  /* outline: 1px dotted red; */
+}
+.myDesignWrap {
+  width: 80%; margin-right: 150px;
+  column-count: 3;
+  column-gap: 15px;
+}
+.myDesignWrap .img_wrap .hover {
+  width: 100%; height: 100%;
+  background: #000;
+}
+.myDesignWrap img {
+  width: 100%;
+  margin-bottom: 15px;
+}
 
+.show {
+  display: block; opacity: 1;
+  animation: classShow;
+  animation-duration: 0.5s;
+}
+.hide {
+  display: none; opacity: 0;
+  animation: classHide;
+  animation-duration: 0.5s;
+}
+@keyframes classHide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes classShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width:1440px) {
   #aboutMe {
@@ -564,23 +610,3 @@ h3.title.change:hover {
     font-size: 14px;
   }
 } 
-
-
-#myDesign {
-  width: 100%; height: 150vh;
-  display: flex; align-items: center; justify-content: center;
-  /* outline: 1px dotted red; */
-}
-.myDesignWrap {
-  width: 80%; margin-right: 150px;
-  column-count: 3;
-  column-gap: 15px;
-}
-.myDesignWrap .img_wrap .hover {
-  width: 100%; height: 100%;
-  background: #000;
-}
-.myDesignWrap img {
-  width: 100%;
-  margin-bottom: 15px;
-}

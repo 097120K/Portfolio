@@ -28,7 +28,7 @@ function typingEvent(){
 let setTyping = setInterval(typingEvent, txtSpeed);
 
 /* 상단 bar-ing */
-let scrollTop = 0;
+/* let scrollTop = 0;
 let bar;
 
 window.onload = function () {
@@ -45,7 +45,23 @@ window.addEventListener(
     bar.style.width = per+"%";
   },
   false
-);
+); */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bar = document.querySelector(".bar-ing"); // 클래스 선택 최적화
+
+  function updateProgressBar() {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const per = Math.ceil((scrollTop / scrollHeight) * 100);
+    bar.style.width = per + "%";
+  }
+
+  window.addEventListener("scroll", () => {
+    requestAnimationFrame(updateProgressBar);
+  });
+});
+
 /* aboutMe h3.title click */
 const title_div = document.querySelector('.title_div');
 const h3El = document.querySelector('h3.title');
@@ -69,32 +85,13 @@ h3El.addEventListener('click',()=>{
   aboutMe_skills.classList.toggle('show');
 })
 
-/* swiper */
-var swiper = new Swiper(".myWorkSwiper", {
-  direction: "vertical",
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-});
-
-var swiper = new Swiper(".myDesign", {
-  loop: true,
-  pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-  },
-});
-
-
+/* myWork */
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
   const slides = document.querySelectorAll(".slide");
   const pagination = document.querySelector(".pagination");
 
   let currentIndex = 0;
-  const totalSlides = slides.length;
 
   // 페이지네이션 버튼 생성
   slides.forEach((_, index) => {
