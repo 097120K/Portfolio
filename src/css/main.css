@@ -303,11 +303,110 @@ h3.title.change:hover {
   color: #393E46;
   /* outline: 1px dotted red; */
 }
+@media screen and (max-width:1440px) {
+  #aboutMe {
+    width: 100%; height: 200vh;
+    display: flex; justify-content: center;
+    /* outline: 1px dotted red; */
+  }
+  .aboutMe_main {
+    margin-top: 100px;
+    flex-direction: column; gap: 80px;
+    /* outline: 1px dotted blue; */
+  }
+  .title_wrap {
+    text-align: center;
+  }
+  h3.title {
+    margin-bottom: 30px;
+  }
+  h3.title.change {
+    text-align: center;
+  }
+  .skills_wrap {
+    flex-direction: column; gap: 30px;
+    /* outline: 1px dotted red; */
+  }
+}
+@media screen and (max-width:1200px) {
+  .aboutMe_main {
+    gap: 50px;
+    /* outline: 1px dotted blue; */
+  }
+  .aboutMe_container {
+    margin-right: 0;
+    /* outline: 1px dotted red; */
+  }
+  .title_wrap {
+    text-align: center;
+  }
+  h3.title.change {
+    text-align: center;
+  }
+  .subTitle {
+    font-size: 18px;
+  }
+  .basic_mine {
+    flex-direction: column-reverse; gap: 20px;
+    /* outline: 1px dotted green; */
+  }
+}
+@media screen and (max-width: 767px) { 
+  .aboutMe_main {
+    gap: 20px;
+    /* outline: 1px dotted blue; */
+  }
+  h3.title {
+    font-size: 20px;
+  }
+  .subTitle {
+    font-size: 14px;
+  }
+  .basic_mine {
+    gap: 10px;
+    /* outline: 1px dotted green; */
+  }
+  .basic_mine .text {
+    height: 200px;
+  }
+  .basic_mine .text .name.en {
+    margin-bottom: 20px;
+  }
+  .basic_mine .text .contact div p a {
+    width: 60px; height: 60px;
+    font-size: 25px; 
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill img {
+    width: 40px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill p {
+    font-size: 18px;
+    /* outline: 1px dotted red; */
+  }
+} 
+@media (max-width: 575px) {
+  .skills_wrap h4 {
+    font-size: 18px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skills_inner .skill {
+    padding: 5px;
+  }
+  .skills_wrap .skill img {
+    width: 30px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill p {
+    font-size: 15px;
+    /* outline: 1px dotted red; */
+  }
+} 
 
 
 #myWork {
   width: 100%; height: 100vh;
-  margin-top: 0;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
@@ -359,6 +458,7 @@ h3.title.change:hover {
     flex-direction: column; gap: 30px;
     /* outline: 1px dotted red; */
   }
+
   #myWork {
     height: 200vh;
     /* outline: 1px dotted red; */
@@ -377,7 +477,7 @@ h3.title.change:hover {
   }
   .swiper-pagination {
     position: absolute;
-    bottom: -30%; left: 0;
+    bottom: -0%; left: 0;
   }
 }
 @media screen and (max-width:1200px) {
