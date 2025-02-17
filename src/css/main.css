@@ -78,7 +78,7 @@ html {
   #header {
     position: fixed;
     top: 35px; left: 20px;
-    z-index: 1;
+    z-index: 200;
     /* outline: 2px dotted red; */
   }
   #header .title a div {
@@ -303,9 +303,95 @@ h3.title.change:hover {
   color: #393E46;
   /* outline: 1px dotted red; */
 }
+
+
+#myWork {
+  width: 100%; height: 100vh;
+  display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
+}
+.myWork {
+  width: 80%; margin-right: 100px;
+  overflow: hidden;
+  display: flex; flex-direction: row; 
+  justify-content: center; align-items: center; gap: 40px;
+  box-sizing: border-box;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper {
+  height: 100%;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide {
+  text-align: center;
+  /* outline: 1px dotted green; */
+}
+.myWork .swiper-slide .swiper-slide-inner {
+  width: 100%; height: 100%;
+  display: flex; gap: 20px; flex-direction: row;
+  justify-content: center; align-items: center;
+  /* outline: 1px dotted blue; */
+}
+.myWork .swiper-slide-inner .slide__img{
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__img img{
+  width: 100%;
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__text {
+  width: 50%; 
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; 
+  /* outline: 1px dotted red; */
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+  margin-bottom: 50px;
+  font-size: 30px; 
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p {
+  font-size: 18px;
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+
+.myWorkSwiper .swiper-pagination {
+  /* outline: 1px dotted red; */
+}
+.myWorkSwiper .swiper-pagination-bullet {
+  width: 14px; height: 14px;
+  color: #393E46;
+  background-color: #393E46; 
+}
+.myWork .slide__text-inner .btn {
+  display: flex; gap: 20px;
+  align-items: center; justify-content: center;
+  /* outline: 1px dotted red; */
+}
+.myWork .slide-btn {
+  width: 140px; padding: 7px 0;
+  background-color: #fff; border: none; outline: none;
+  border-top: 1px solid #393E4640;
+  border-bottom: 2px solid #393E4680;
+  border-radius: 5px;
+  font-size: 15px; cursor: pointer;
+}
+.slide-btn:hover {
+  background: #ececec; color: #222;
+}
 @media screen and (max-width:1440px) {
   #aboutMe {
-    width: 100%; height: 200vh;
+    width: 100%; height: 150vh;
+    padding-bottom: 150px;
     display: flex; justify-content: center;
     /* outline: 1px dotted red; */
   }
@@ -327,10 +413,38 @@ h3.title.change:hover {
     flex-direction: column; gap: 30px;
     /* outline: 1px dotted red; */
   }
+  #myWork {
+    margin-top: 200px;
+  }
+  .myWork .swiper-slide .swiper-slide-inner {
+    flex-direction: column;
+    /* outline: 1px dotted blue; */
+  }
+  .myWork .swiper-slide-inner .slide__img img{
+    width: 70%;
+    margin: 0 auto;
+    /* outline: 1px dotted red; */
+  }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+    margin-bottom: 30px;
+    font-size:28px; 
+  }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
+    margin-bottom: 15px;
+  }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
+    margin-bottom: 15px;
+  }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width:1200px) {
+  #aboutMe {
+    height: 200vh;
+  }
   .aboutMe_main {
-    gap: 50px;
+    gap: 100px;
     /* outline: 1px dotted blue; */
   }
   .aboutMe_container {
@@ -347,8 +461,19 @@ h3.title.change:hover {
     font-size: 18px;
   }
   .basic_mine {
+    margin-top: 100px;
     flex-direction: column-reverse; gap: 20px;
     /* outline: 1px dotted green; */
+  }
+  .myWork {
+    margin-right: 0;
+    /* outline: 1px dotted red; */
+  }
+  .myWork .swiper-slide .swiper-slide-inner {
+    gap: 0;
+  }
+  .myWork .swiper-slide-inner .slide__img img{
+    width: 60%;
   }
 }
 @media screen and (max-width: 767px) { 
@@ -385,6 +510,12 @@ h3.title.change:hover {
     font-size: 18px;
     /* outline: 1px dotted red; */
   }
+  .myWork .swiper-slide-inner .slide__img img{
+    width: 80%;
+  }
+  .myWorkSwiper .swiper-pagination-bullet {
+    width: 12px; height: 12px;
+  }
 } 
 @media (max-width: 575px) {
   .skills_wrap h4 {
@@ -402,99 +533,13 @@ h3.title.change:hover {
     font-size: 15px;
     /* outline: 1px dotted red; */
   }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+    font-size: 20px; 
+  }
+  .myWork .swiper-slide-inner .slide__text .slide__text-inner p {
+    font-size: 14px;
+  }
 } 
-
-
-#myWork {
-  width: 100%; height: 100vh;
-  display: flex; flex-direction: column; 
-  justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
-}
-.myWork {
-  width: 80%; margin-right: 100px;
-  overflow: hidden;
-  display: flex; flex-direction: row; 
-  justify-content: center; align-items: center; gap: 40px;
-  box-sizing: border-box;
-  /* outline: 1px dotted red; */
-}
-.myWork h2 {
-  padding: 30px 40px 30px 0; box-sizing: border-box;
-  border-right: 1px solid #393E46;
-  font-size: 55px; font-weight: bold; text-align: left;
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper {
-  height: 100%;
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide {
-  text-align: center;
-  /* outline: 1px dotted green; */
-}
-.myWork .swiper-slide .swiper-slide-inner {
-  width: 100%; height: 100%;
-  display: flex; gap: 20px;
-  justify-content: flex-start; align-items: center;
-  /* outline: 1px dotted blue; */
-}
-.myWork .swiper-slide-inner .slide__img{
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide-inner .slide__img img{
-  width: 700px;
-  display: inline-block;
-  margin: 0 auto;
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide-inner .slide__text {
-  width: 450px; margin-right: 30px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; 
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide-inner .slide__text .slide__text-inner {
-  width: 80%;
-  /* outline: 1px dotted blue; */
-}
-.myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
-  margin-bottom: 50px;
-  font-size: 30px; 
-}
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
-  margin-bottom: 30px;
-}
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
-  margin-bottom: 15px;
-}
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
-  margin-bottom: 50px;
-}
-.myWorkSwiper .swiper-pagination {
-  /* outline: 1px dotted red; */
-}
-.myWorkSwiper .swiper-pagination-bullet {
-  width: 14px; height: 14px;
-  color: #393E46;
-  background-color: #393E46; 
-}
-.myWork .slide__text-inner .btn {
-  display: flex; gap: 20px;
-  align-items: center; justify-content: center;
-  /* outline: 1px dotted red; */
-}
-.myWork .slide-btn {
-  width: 140px; padding: 7px 0;
-  background-color: #fff; border: none; outline: none;
-  border-top: 1px solid #393E4640;
-  border-bottom: 2px solid #393E4680;
-  border-radius: 5px;
-  font-size: 15px; cursor: pointer;
-}
-.slide-btn:hover {
-  background: #ececec; color: #222;
-}
 
 
 
