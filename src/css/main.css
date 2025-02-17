@@ -265,7 +265,6 @@ h3.title.change:hover {
 .basic_mine .text .contact div p a:hover {
   background: #393E4690; color: #fff;
 }
-
 .aboutMe_skills {
   width: 100%;
   display: none; opacity: 0;
@@ -305,6 +304,7 @@ h3.title.change:hover {
 }
 
 
+
 #myWork {
   width: 100%; height: 100vh;
   display: flex; flex-direction: column; 
@@ -312,65 +312,51 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .myWork {
-  width: 80%; margin-right: 100px;
+  position: relative;
+  width: 80%; margin-right: 150px;
   overflow: hidden;
-  display: flex; flex-direction: row; 
-  justify-content: center; align-items: center; gap: 40px;
-  box-sizing: border-box;
   /* outline: 1px dotted red; */
 }
-.myWork .swiper {
-  height: 100%;
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide {
-  text-align: center;
-  /* outline: 1px dotted green; */
-}
-.myWork .swiper-slide .swiper-slide-inner {
-  width: 100%; height: 100%;
-  display: flex; gap: 20px; flex-direction: row;
-  justify-content: center; align-items: center;
-  /* outline: 1px dotted blue; */
-}
-.myWork .swiper-slide-inner .slide__img{
-  /* outline: 1px dotted red; */
-}
-.myWork .swiper-slide-inner .slide__img img{
+.myWork .slider-container {
   width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
   /* outline: 1px dotted red; */
 }
-.myWork .swiper-slide-inner .slide__text {
-  width: 50%; 
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; 
+.myWork .slider {
+  display: flex;
+  transition: 0.5s ease-in-out;
   /* outline: 1px dotted red; */
 }
-.myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+.myWork .slide {
+  display: flex; justify-content: center; align-items: center; gap: 50px;
+  min-width: 100%;
+  transition: 0.5s;
+  /* outline: 1px dotted red; */
+}
+.slide img {
+  width: 60%;
+  display: block;
+  /* outline: 1px dotted red; */
+}
+.slide__text {
+  width: 30%;
+  display: flex; justify-content: center; align-items: center;
+}
+.slide__text .slide__text-inner h4 {
   margin-bottom: 50px;
-  font-size: 30px; 
+  font-size: 30px; text-align: center;
 }
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p {
+.slide__text .slide__text-inner p {
   font-size: 18px;
 }
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
+.slide__text .slide__text-inner p:nth-of-type(1) {
   margin-bottom: 30px;
 }
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
+.slide__text .slide__text-inner p:nth-of-type(2) {
   margin-bottom: 15px;
 }
-.myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
+.slide__text .slide__text-inner p:nth-of-type(3) {
   margin-bottom: 50px;
-}
-
-.myWorkSwiper .swiper-pagination {
-  /* outline: 1px dotted red; */
-}
-.myWorkSwiper .swiper-pagination-bullet {
-  width: 14px; height: 14px;
-  color: #393E46;
-  background-color: #393E46; 
 }
 .myWork .slide__text-inner .btn {
   display: flex; gap: 20px;
@@ -388,6 +374,31 @@ h3.title.change:hover {
 .slide-btn:hover {
   background: #ececec; color: #222;
 }
+/* 페이지네이션 버튼 스타일 */
+.pagination {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  transform: translateX(-50%);
+  display: flex; flex-direction: row;
+  gap: 5px;
+  /* outline: 1px dotted red; */
+}
+
+.pagination button {
+  width: 14px;
+  height: 14px;
+  background-color: #ddd; 
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagination .active {
+  background: #393E46;
+}
+
+
+
 @media screen and (max-width:1440px) {
   #aboutMe {
     width: 100%; height: 150vh;
@@ -413,30 +424,43 @@ h3.title.change:hover {
     flex-direction: column; gap: 30px;
     /* outline: 1px dotted red; */
   }
+
   #myWork {
-    margin-top: 200px;
+    height: 150vh;
   }
-  .myWork .swiper-slide .swiper-slide-inner {
-    flex-direction: column;
+  .myWork .slide {
+    flex-direction: column; gap: 0;
     /* outline: 1px dotted blue; */
   }
-  .myWork .swiper-slide-inner .slide__img img{
-    width: 70%;
+  .slide img{
+    width: 60%;
     margin: 0 auto;
     /* outline: 1px dotted red; */
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
+  .slide__text {
+    width: 60%;
+  }
+  .myWork .slide__text .slide__text-inner h4 {
     margin-bottom: 30px;
     font-size:28px; 
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(1) {
+  .slide__text .slide__text-inner p:nth-of-type(1) {
     margin-bottom: 15px;
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(2) {
+  .slide__text .slide__text-inner p:nth-of-type(2) {
     margin-bottom: 15px;
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner p:nth-of-type(3) {
+  .slide__text .slide__text-inner p:nth-of-type(3) {
     margin-bottom: 20px;
+  }
+  .pagination {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex; flex-direction: row;
+    gap: 5px;
+    /* outline: 1px dotted red; */
   }
 }
 @media screen and (max-width:1200px) {
@@ -465,14 +489,12 @@ h3.title.change:hover {
     flex-direction: column-reverse; gap: 20px;
     /* outline: 1px dotted green; */
   }
+
   .myWork {
     margin-right: 0;
     /* outline: 1px dotted red; */
   }
-  .myWork .swiper-slide .swiper-slide-inner {
-    gap: 0;
-  }
-  .myWork .swiper-slide-inner .slide__img img{
+  .slide img{
     width: 60%;
   }
 }
@@ -510,10 +532,11 @@ h3.title.change:hover {
     font-size: 18px;
     /* outline: 1px dotted red; */
   }
-  .myWork .swiper-slide-inner .slide__img img{
+
+  .slide img{
     width: 80%;
   }
-  .myWorkSwiper .swiper-pagination-bullet {
+  .pagination button {
     width: 12px; height: 12px;
   }
 } 
@@ -533,256 +556,31 @@ h3.title.change:hover {
     font-size: 15px;
     /* outline: 1px dotted red; */
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner h4 {
-    font-size: 20px; 
+
+  .slide__text .slide__text-inner h4 {
+    font-size: 18px; 
   }
-  .myWork .swiper-slide-inner .slide__text .slide__text-inner p {
+  .slide__text .slide__text-inner p {
     font-size: 14px;
   }
 } 
 
 
-
 #myDesign {
-  position: relative;
-  width: 100%; height: 100vh;
+  width: 100%; height: 150vh;
   display: flex; align-items: center; justify-content: center;
   /* outline: 1px dotted red; */
 }
-.myDesign {
-  width: 80%; height: 100%;  margin-right: 100px; 
-  display: flex; flex-direction: row;
-  justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
+.myDesignWrap {
+  width: 80%; margin-right: 150px;
+  column-count: 3;
+  column-gap: 15px;
 }
-.myDesign h2 {
-  padding: 30px 40px 30px 0; box-sizing: border-box;
-  font-size: 55px; font-weight: bold; text-align: left;
-  border-right: 1px solid #000;
-  /* outline: 1px dotted red; */
-} 
-.myDesign .myDesign_wrap {
-  flex: 4; height: 100%;
-  display: flex; justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_wrap .myDesign_inner {
-  height: 90%;
-  display: flex; gap: 10px;  flex-wrap: wrap;
-  justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
-}
-.myDesign_inner .contents {
-  width:250px; height: 250px;
-  border-radius: 10px;
-  display: flex; justify-content: center; align-items: center;
-  overflow: hidden;
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(100%);
-  background-color: #000;
-  cursor: pointer;
-}
-.myDesign_inner .contents:hover {
-  filter: grayscale(0%);
-}
-.myDesign_content1 {
-  background-image: url(../img/myDesign/400x400_국세청.png);
-}
-.myDesign_content2 {
-  background-image: url(../img/myDesign/400x400_스즈키.png);
-}
-.myDesign_content3 {
-  background-image: url(../img/myDesign/400x400_농협.png);
-}
-.myDesign_content4 {
-  background-image: url(../img/myDesign/600x1000_축제배너.png);
-}
-.myDesign_content5{
-  background-image: url(../img/myDesign/2560x423_유투브배너.png);
-}
-.myDesign_content6 {
-  background-image: url(../img/myDesign/1000x800_배달배너.png);
-}
-
-.myDesign_modal {
-  display: none; opacity: 0;
-  position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0;
+.myDesignWrap .img_wrap .hover {
   width: 100%; height: 100%;
-  background: #00000050;
+  background: #000;
 }
-.myDesign_modal .modalBox {
-  padding: 30px;
-  position: absolute; 
-  top: 50%; left: 50%; z-index: 1;
-  transform: translate(-50%, -50%);
-  width: 70%; height: 80%;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.modalBox.content1 {
-  display: flex; 
-  justify-content: center; align-items: center; gap: 30px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 60%; height: 100%; overflow: auto;
-    display: flex; flex-wrap: wrap; gap: 10px;
-    justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-    img:nth-of-type(2) {
-      width: 600px;
-    }
-    img:nth-of-type(3) {
-      width: 400px;
-    }
-  }
-  .textBox {
-    text-align: center;
-    width: 35%;
-    /* outline: 1px dotted red; */
-    /* background: yellow; */
-  }
-}
-.modalBox.content2  {
-  display: flex; 
-  justify-content: center; align-items: center; gap: 30px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 60%; height: 100%; overflow: auto;
-    display: flex; flex-wrap: wrap; gap: 10px;
-    justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-    img:nth-of-type(2) {
-      width: 600px;
-    }
-    img:nth-of-type(3) {
-      width: 400px;
-    }
-  }
-  .textBox {
-    text-align: center;
-    width: 35%;
-    /* outline: 1px dotted red; */
-    /* background: yellow; */
-  }
-}
-.modalBox.content3  {
-  display: flex; 
-  justify-content: center; align-items: center; gap: 30px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 60%; height: 100%; overflow: auto;
-    display: flex; flex-wrap: wrap; gap: 10px;
-    justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-    img:nth-of-type(2) {
-      width: 600px;
-    }
-    img:nth-of-type(3) {
-      width: 400px;
-    }
-  }
-  .textBox {
-    text-align: center;
-    width: 35%;
-    /* outline: 1px dotted red; */
-    /* background: yellow; */
-  }
-}
-.modalBox.content4  {
-  display: flex;
-  justify-content: center; align-items: center; gap: 50px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 33%;
-    display: flex; justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-  }
-  .textBox {
-    text-align: center;
-    width: 35%;
-    /* outline: 1px dotted red; */
-    /* background: yellow; */
-  }
-}
-.modalBox.content5  {
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: center; gap: 30px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 100%; height: 50%;
-    display: flex; justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-  }
-  .textBox {
-    text-align: center;
-    width: 70%;
-    /* outline: 1px dotted red; */
-    /* background: yellow; */
-  }
-}
-.modalBox.content6  {
-  display: flex; 
-  justify-content: center; align-items: center; gap: 30px;
-  /* outline: 1px dotted red; */
-  .imgBox {
-    width: 60%; 
-    display: flex; justify-content: center; align-items: center;
-    /* outline: 1px dotted red; */
-  }
-  .textBox {
-    text-align: center;
-    width: 40%;
-    /* background: yellow; */
-  }
-}
-.modalBox .imgBox img {
-  display: block; width: 100%;
-  margin: 0 auto;
-  /* outline: 1px dotted red; */
-}
-.modalBox .textBox h4 {
-  padding: 20px 0 20px;
-  font-size: 25px;
-}
-.modalBox .textBox p.size {
-  padding: 10px 0;
-  font-size: 18px;
-}
-.modalBox .textBox p.explanation {
-  padding: 10px 0 20px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.show {
-  display: block; opacity: 1;
-  animation: classShow;
-  animation-duration: 0.5s;
-}
-.hide {
-  display: none; opacity: 0;
-  animation: classHide;
-  animation-duration: 0.5s;
-}
-@keyframes classHide {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-@keyframes classShow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.myDesignWrap img {
+  width: 100%;
+  margin-bottom: 15px;
 }

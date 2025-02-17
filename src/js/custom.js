@@ -79,63 +79,43 @@ var swiper = new Swiper(".myWorkSwiper", {
   },
 });
 
-var swiper1 = new Swiper(".myDesignSwiper", {
-  direction: "vertical",
-  mousewheel: true,
+var swiper = new Swiper(".myDesign", {
+  loop: true,
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true
+      el: ".swiper-pagination",
+      clickable: true,
   },
 });
 
-/* myDesign */
-const content1 = document.querySelector('.myDesign_content1')
-const content2 = document.querySelector('.myDesign_content2')
-const content3 = document.querySelector('.myDesign_content3')
-const content4 = document.querySelector('.myDesign_content4')
-const content5 = document.querySelector('.myDesign_content5')
-const content6 = document.querySelector('.myDesign_content6')
 
-const modal1 = document.querySelector('.content1')
-const modal2 = document.querySelector('.content2')
-const modal3 = document.querySelector('.content3')
-const modal4 = document.querySelector('.content4')
-const modal5 = document.querySelector('.content5')
-const modal6 = document.querySelector('.content6')
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const pagination = document.querySelector(".pagination");
 
-content1.addEventListener('click',()=>{
-  modal1.classList.toggle('show');
-})
-modal1.addEventListener('click',()=>{
-  modal1.classList.toggle('show');
-})
-content2.addEventListener('click',()=>{
-  modal2.classList.toggle('show');
-})
-modal2.addEventListener('click',()=>{
-  modal2.classList.toggle('show');
-})
-content3.addEventListener('click',()=>{
-  modal3.classList.toggle('show');
-})
-modal3.addEventListener('click',()=>{
-  modal3.classList.toggle('show');
-})
-content4.addEventListener('click',()=>{
-  modal4.classList.toggle('show');
-})
-modal4.addEventListener('click',()=>{
-  modal4.classList.toggle('show');
-})
-content5.addEventListener('click',()=>{
-  modal5.classList.toggle('show');
-})
-modal5.addEventListener('click',()=>{
-  modal5.classList.toggle('show');
-})
-content6.addEventListener('click',()=>{
-  modal6.classList.toggle('show');
-})
-modal6.addEventListener('click',()=>{
-  modal6.classList.toggle('show');
-})
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // 페이지네이션 버튼 생성
+  slides.forEach((_, index) => {
+      const btn = document.createElement("button");
+      btn.addEventListener("click", () => {
+          currentIndex = index;
+          updateSlide();
+      });
+      pagination.appendChild(btn);
+  });
+
+  const pageButtons = document.querySelectorAll(".pagination button");
+
+  function updateSlide() {
+      slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+      pageButtons.forEach((btn, i) => {
+          btn.classList.toggle("active", i === currentIndex);
+      });
+  }
+
+  // 초기 상태 업데이트
+  updateSlide();
+});
+
