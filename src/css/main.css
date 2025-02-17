@@ -62,10 +62,11 @@ html {
   margin-top: 200px;
   /* outline: 2px dotted red; */
 }
+
 #header nav ul li {
   position: relative;
   text-align: right; 
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   text-shadow: 0px 0px 25px #393E46;
   transition: .3s;
 }
@@ -73,54 +74,45 @@ html {
   font-weight: bold;
   text-shadow: none;
 }
-@media screen and (max-width : 1025px) {
-  .bar-ing {
-    background: #fff;
-  }
+@media screen and (max-width : 1200px) {
   #header {
     position: fixed;
     top: 35px; left: 20px;
     z-index: 1;
+    /* outline: 2px dotted red; */
   }
   #header .title a div {
     width: 80px; height: 80px;
     top: -25px; right: 15px;
   }
+  .header {
+    width: 100%;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    /* outline: 2px dotted red; */
+  }
   #header nav ul {
-    display: flex; flex-direction: row; 
+    display: flex; flex-direction: row; gap: 40px;
     justify-content: center; align-items: center;
-    margin-top: 30px;
+    margin-top: 0;
     /* outline: 2px dotted red; */
   }
   #header nav ul li {
-    flex: 1;
-    font-size: 1.2rem;
+  font-size: 2.5vw;
   }
 }
-@media screen and (max-width : 610px) {
+@media screen and (max-width : 575px) {
   #header nav ul {
-    display: flex; gap: 50px;
-    justify-content: center; align-items: flex-end;
-    margin-top: 30px;
+    display: flex; flex-direction: column; gap: 10px;
+    justify-content: center; align-items: center;
+    margin-top: 0;
     /* outline: 2px dotted red; */
   }
   #header nav ul li {
-    font-size: 1rem;
-  }
+    font-size: 3vw;
+    }
 }
-@media screen and (max-width : 450px) {
-  #header nav ul {
-    display: flex; gap: 10px; flex-direction: column;
-    justify-content: center; align-items: flex-end;
-    margin-top: 70px;
-    position: absolute;
-    top: -20px; right: 0;
-    /* outline: 2px dotted red; */
-  }
-  #header nav ul li {
-    font-size: 1rem;
-  }
-}
+
 
 /* MAIN */
 #main {
@@ -130,30 +122,32 @@ html {
 }
 
 #main h1 {
+  height: 100%;
   font-size: 100px;
   position: absolute; 
   top: 50%; transform: translate(0, -50%);
   z-index: -1;
   color: #efefef60;
-  font-weight: bold;
+  font-weight: bold; /* text-align: center; */
+  overflow: hidden;
   /* outline: 1px dotted red; */
 }
 .main {
-  height: 100%;
-  justify-content: start;
-  /* outline: 1px dotted red; */
-}
-.text_box{
+  width: 100%; height: 100%;
   margin: 0 auto;
   /* outline: 1px dotted red; */
 }
+.text_box{
+  margin: 0 auto; 
+  /* outline: 1px dotted red; */
+}
 .text_box .text {
-  font-size: 8em;
+  font-size: 8vw;
   font-weight: bold;
 }
 .blink {
   animation: blink 0.3s infinite;
-  font-size: 9rem;
+  font-size: 9vw;
 }
 @keyframes blink {
   to {
@@ -165,6 +159,7 @@ html {
 #aboutMe {
   width: 100%; height: 100vh;
   display: flex; justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
 }
 .aboutMe_container {
   width: 80%; height: 100%; 
@@ -176,20 +171,22 @@ html {
 }
 .aboutMe_main {
   width: 100%;
-  display: flex; 
+  display: flex; flex-direction: row;
   justify-content: space-evenly; align-items: center;
   /* outline: 1px dotted red; */
+}
+.title_wrap {
+  position: relative;
+  /* background: yellow; */
 }
 h3.title {
   width: 100%; margin-bottom: 50px;
   text-align: center;
-  font-size: 60px;
+  font-size: 3vw;
   /* outline: 1px dotted red; */
 }
 h3.title.change {
-/*   position: absolute; 
-  top: 50px; left: 30px; */
-  text-align-last: left;
+  text-align: left;
   color: #444;
   transition: 1s;
   /* outline: 1px dotted red; */
@@ -198,14 +195,15 @@ h3.title.change:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 .title_div {
   position: absolute;
-  top: calc(50% - 90px); left: calc(80% - 30px);
-  width: 100px; height: 100px;
+  top: -2vw; right: -6vw;
+  width: 6vw; height: 6vw;
   padding: 5px; box-sizing: border-box;
   border-radius: 50%;
   background: #000; color: #fff;
-  text-align: center; line-height: 90px;
+  text-align: center; line-height: 5vw; font-size: 1vw;
   cursor: pointer; transition: 1s;
   animation: bounce 0.5s 0.1s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
 }
@@ -224,6 +222,7 @@ h3.title.change:hover {
 
 .mine_wrap {
   display: none; opacity: 0;
+  /* background: red; */
   /* outline: 1px dotted red; */
 }
 .basic_mine {
@@ -242,7 +241,7 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .basic_mine .text .name.ko {
-  font-size: 3rem;
+  font-size: 3vw;
   text-align: right;
   /* outline: 1px dotted red; */
 }
@@ -266,13 +265,15 @@ h3.title.change:hover {
 .basic_mine .text .contact div p a:hover {
   background: #393E4690; color: #fff;
 }
+
 .aboutMe_skills {
   width: 100%;
   display: none; opacity: 0;
 }
 .skills_wrap {
   width: 100%;
-  display: flex; justify-content: space-around; align-items: center;
+  display: flex; flex-direction: row; gap: 0;
+  justify-content: space-around; align-items: center;
   /* outline: 1px dotted red; */
 }
 .skills_wrap h4 {
@@ -306,6 +307,7 @@ h3.title.change:hover {
 
 #myWork {
   width: 100%; height: 100vh;
+  margin-top: 0;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
@@ -325,24 +327,154 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .myWork .swiper {
-  height: 100%;
+  width: 100%; position: relative;
   /* outline: 1px dotted red; */
 }
 .myWork .swiper-slide {
+  height: 1000px;
   text-align: center;
   /* outline: 1px dotted green; */
 }
+@media screen and (max-width:1440px) {
+  #aboutMe {
+    width: 100%; height: 200vh;
+    display: flex; justify-content: center;
+    /* outline: 1px dotted red; */
+  }
+  .aboutMe_main {
+    margin-top: 100px;
+    flex-direction: column; gap: 80px;
+    /* outline: 1px dotted blue; */
+  }
+  .title_wrap {
+    text-align: center;
+  }
+  h3.title {
+    margin-bottom: 30px;
+  }
+  h3.title.change {
+    text-align: center;
+  }
+  .skills_wrap {
+    flex-direction: column; gap: 30px;
+    /* outline: 1px dotted red; */
+  }
+  #myWork {
+    height: 200vh;
+    /* outline: 1px dotted red; */
+  }
+  .myWork {
+    width: 80%; margin-right: 100px;
+    overflow: hidden;
+    display: flex; flex-direction: column; 
+    justify-content: center; align-items: start; gap: 40px;
+    box-sizing: border-box;
+    /* outline: 1px dotted red; */
+  }
+  .myWork .swiper-slide {
+    text-align: center;
+    /* outline: 1px dotted green; */
+  }
+  .swiper-pagination {
+    position: absolute;
+    bottom: -30%; left: 0;
+  }
+}
+@media screen and (max-width:1200px) {
+  .aboutMe_main {
+    gap: 50px;
+    /* outline: 1px dotted blue; */
+  }
+  .aboutMe_container {
+    margin-right: 0;
+    /* outline: 1px dotted red; */
+  }
+  .title_wrap {
+    text-align: center;
+  }
+  h3.title.change {
+    text-align: center;
+  }
+  .subTitle {
+    font-size: 18px;
+  }
+  .basic_mine {
+    flex-direction: column-reverse; gap: 20px;
+    /* outline: 1px dotted green; */
+  }
+  .myWork {
+    margin-right: 0px;
+    /* outline: 1px dotted red; */
+  }
+}
+@media screen and (max-width: 767px) { 
+  .aboutMe_main {
+    gap: 20px;
+    /* outline: 1px dotted blue; */
+  }
+  h3.title {
+    font-size: 20px;
+  }
+  .subTitle {
+    font-size: 14px;
+  }
+  .basic_mine {
+    gap: 10px;
+    /* outline: 1px dotted green; */
+  }
+  .basic_mine .text {
+    height: 200px;
+  }
+  .basic_mine .text .name.en {
+    margin-bottom: 20px;
+  }
+  .basic_mine .text .contact div p a {
+    width: 60px; height: 60px;
+    font-size: 25px; 
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill img {
+    width: 40px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill p {
+    font-size: 18px;
+    /* outline: 1px dotted red; */
+  }
+} 
+@media (max-width: 575px) {
+  .skills_wrap h4 {
+    font-size: 18px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skills_inner .skill {
+    padding: 5px;
+  }
+  .skills_wrap .skill img {
+    width: 30px;
+    /* outline: 1px dotted red; */
+  }
+  .skills_wrap .skill p {
+    font-size: 15px;
+    /* outline: 1px dotted red; */
+  }
+} 
 .myWork .swiper-slide .swiper-slide-inner {
-  width: 100%; height: 100%;
-  display: flex; gap: 20px;
+  width: 100%; 
+  display: flex; gap: 20px; flex-direction: row;
   justify-content: flex-start; align-items: center;
-  /* outline: 1px dotted blue; */
+  outline: 1px dotted blue;
+}
+@media screen and (min-width:1440px) {
+  .myWork .swiper-slide .swiper-slide-inner {
+    height: 100%;
+  }
 }
 .myWork .swiper-slide-inner .slide__img{
   /* outline: 1px dotted red; */
 }
 .myWork .swiper-slide-inner .slide__img img{
-  width: 700px;
+  width: 90%;
   display: inline-block;
   margin: 0 auto;
   /* outline: 1px dotted red; */
