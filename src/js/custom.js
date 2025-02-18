@@ -116,3 +116,24 @@ document.addEventListener("DOMContentLoaded", function () {
   updateSlide();
 });
 
+
+/* header활성화 */
+const buttons = document.querySelectorAll(".sectionBtn");
+const sections = document.querySelectorAll(".section");
+
+function handleScroll() {
+  let currentSection = null;
+
+  sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          currentSection = section.id;
+      }
+  });
+
+  buttons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.section === currentSection);
+  });
+}
+
+window.addEventListener("scroll", handleScroll);
