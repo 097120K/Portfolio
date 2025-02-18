@@ -65,7 +65,7 @@ html {
 #header nav ul li {
   position: relative;
   text-align: right; 
-  font-size: 1.5vw;
+  font-size: 2rem;
   text-shadow: 0px 0px 25px #393E46;
   transition: .3s;
 }
@@ -100,7 +100,7 @@ html {
     /* outline: 2px dotted red; */
   }
   #header nav ul li {
-  font-size: 2.5vw;
+  font-size: 1.2rem;
   }
 }
 @media screen and (max-width : 575px) {
@@ -110,9 +110,6 @@ html {
     margin-top: 0;
     /* outline: 2px dotted red; */
   }
-  #header nav ul li {
-    font-size: 3vw;
-    }
 }
 
 
@@ -144,12 +141,13 @@ html {
   /* outline: 1px dotted red; */
 }
 .text_box .text {
-  font-size: 8vw;
+  font-size: 5rem;
   font-weight: bold;
+  /* outline: 1px dotted red; */
 }
 .blink {
   animation: blink 0.3s infinite;
-  font-size: 9vw;
+  font-size: 6rem;
 }
 @keyframes blink {
   to {
@@ -159,7 +157,7 @@ html {
 
 /* AboutMe_new */
 #aboutMe {
-  width: 100%; height: 100vh;
+  width: 100%; height: 100vh; 
   display: flex; justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
@@ -184,7 +182,7 @@ html {
 h3.title {
   width: 100%; margin-bottom: 50px;
   text-align: center;
-  font-size: 3vw;
+  font-size: 3rem;
   /* outline: 1px dotted red; */
 }
 h3.title.change {
@@ -200,12 +198,12 @@ h3.title.change:hover {
 
 .title_div {
   position: absolute;
-  top: -2vw; right: -6vw;
-  width: 6vw; height: 6vw;
+  top: -3rem; right: -7rem;
+  width: 7rem; height: 7rem;
   padding: 5px; box-sizing: border-box;
   border-radius: 50%;
   background: #000; color: #fff;
-  text-align: center; line-height: 5vw; font-size: 1vw;
+  text-align: center; line-height: 6rem; font-size: 1rem;
   cursor: pointer; transition: 1s;
   animation: bounce 0.5s 0.1s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
 }
@@ -242,7 +240,7 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .basic_mine .text .name.ko {
-  font-size: 3vw;
+  font-size: 3rem;
   text-align: right;
   /* outline: 1px dotted red; */
 }
@@ -308,6 +306,7 @@ h3.title.change:hover {
 
 #myWork {
   width: 100%; height: 100vh;
+  margin: 0;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
@@ -400,7 +399,7 @@ h3.title.change:hover {
 
 
 #myDesign {
-  width: 100%; height: 350vh;
+  width: 100%; margin: 200px 0;
   display: flex; align-items: center; justify-content: center;
   /* outline: 1px dotted red; */
 }
@@ -440,6 +439,28 @@ h3.title.change:hover {
   opacity: 1;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+  font-size: 14px;
+}
+
+footer p {
+  padding: 10px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #393E46;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 .show {
   display: block; opacity: 1;
   animation: classShow;
@@ -471,13 +492,11 @@ h3.title.change:hover {
 
 @media screen and (max-width:1440px) {
   #aboutMe {
-    width: 100%; height: 150vh;
-    /* padding-bottom: 150px; */
-    /* outline: 1px dotted red; */
+    height: 200vh;
   }
   .aboutMe_main {
     margin-top: 100px;
-    flex-direction: column;
+    flex-direction: column; gap: 100px;
     /* outline: 1px dotted blue; */
   }
   .title_wrap {
@@ -495,7 +514,7 @@ h3.title.change:hover {
   }
 
   #myWork {
-    height: 110vh;
+    height: 100vh;
   }
   .myWork .slide {
     flex-direction: column; gap: 0;
@@ -533,12 +552,14 @@ h3.title.change:hover {
   }
 }
 @media screen and (max-width:1200px) {
-  #aboutMe {
-    height: 160vh;
-  }
   .aboutMe_container {
     margin-right: 0; gap: 100px;
     /* outline: 1px dotted red; */
+  }
+  .aboutMe_main {
+    margin-top: 100px;
+    flex-direction: column; gap: 0;
+    /* outline: 1px dotted blue; */
   }
   .title_wrap {
     text-align: center;
@@ -563,9 +584,7 @@ h3.title.change:hover {
     width: 60%;
   }
 
-  #myDesign {
-    height: 350vh; 
-  }
+
   .myDesignWrap {
     width: 80%; margin-right: 0;
     column-count: 2;
@@ -642,11 +661,16 @@ h3.title.change:hover {
     font-size: 14px;
   }
 
-  #myDesign {
-    height: 750vh; 
-  }
   .myDesignWrap {
     column-count: 1;
     column-gap: 10px;
   }
 } 
+@media (max-width: 320px) {
+  .slide__text .slide__text-inner h4 {
+    font-size: 16px; 
+  }
+  .slide__text .slide__text-inner p {
+    font-size: 12px;
+  }
+}
