@@ -8,6 +8,7 @@
   <script src="./src/js/jquery-2.1.1.min.js"></script>
   <script defer src="./src/js/custom.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.3.0/dist/photoswipe.css">
   <link rel="stylesheet" href="./src/css/all.min.css">
   <link rel="stylesheet" href="./src/css/main.css">
 </head>
@@ -253,13 +254,16 @@
     </div>
   </section>
 
-  <section id="myDesign">
+  <!-- <section id="myDesign">
     <div class="myDesignWrap">
       <div class="image-container">
         <img src="./src/img/myDesign/1000x800_배달배너.png" alt="배달 배너">
         <div class="image-text">
           <h4>배달 홍보 배너 1000*800</h4>
           <p>Photoshop을 사용하여 디자인하였습니다.</p>
+        </div>
+        <div class="big_img">
+          <img src="./src/img/myDesign/1000x800_배달배너.png" alt="배달 배너">
         </div>
       </div>
       <div class="image-container">
@@ -375,7 +379,317 @@
         </div>
       </div>
     </div>
+  </section> -->
+
+  <section id="myDesign">
+    <div class="pswp-gallery" id="gallery">
+      <div class="pswp-gallery__items">
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/1000x800_배달배너.png" 
+            data-pswp-width="1000" 
+            data-pswp-height="800" 
+            target="_blank">
+            <img src="./src/img/myDesign/1000x800_배달배너.png"  alt="Demo image 1" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>배달 홍보 배너</b>
+            <br>Photoshop
+            <br>1000*800
+            <br>빠르다는 단어을 총알에 빗대어 표현
+          </div>
+        </div>
+      
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/1200x250_국세청.png" 
+            data-pswp-width="1200" 
+            data-pswp-height="250" 
+            target="_blank">
+            <img src="./src/img/myDesign/1200x250_국세청.png"  alt="Demo image 2" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>국세청 배너</b>
+            <br>Photoshop
+            <br>1200*250
+            <br>국민 참여를 이끌어내기 위함
+          </div>
+        </div>
+      
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/1200x250_농협.png" 
+            data-pswp-width="1200" 
+            data-pswp-height="250" 
+            target="_blank">
+            <img src="./src/img/myDesign/1200x250_농협.png"  alt="Demo image 3" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>은행 적금 홍보 배너</b><br>
+            <br>Photoshop
+            <br>1200*250
+            <br>은행 새로운 적금 안내/홍보
+          </div>
+        </div>
+        
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/1200x250_스즈키.png" 
+            data-pswp-width="1200" 
+            data-pswp-height="250" 
+            target="_blank">
+            <img src="./src/img/myDesign/1200x250_스즈키.png"  alt="Demo image 4" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>신형 오토바이 홍보 배너</b><br>
+            <br>Photoshop
+            <br>1200*250
+            <br>새로운 오토바이를 홍보
+          </div>
+        </div>
+  
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/2560x423_유투브배너.png" 
+            data-pswp-width="2560" 
+            data-pswp-height="423" 
+            target="_blank">
+            <img src="./src/img/myDesign/2560x423_유투브배너.png" alt="Demo image 5" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>YOUTUBE 배너</b><br>
+            <br>Photoshop
+            <br>2560*423
+            <br>YOUTUBE 주 컨텐츠와 등장인물을 담아 배너를 통해 주제를 보여줌
+          </div>
+        </div>
+  
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/300x400 타이포그래픽_건강검진센터.png" 
+            data-pswp-width="300" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/300x400 타이포그래픽_건강검진센터.png"  alt="Tall image" />
+            <div class="pswp-caption-content">
+              <b>건강검진센터 안내</b><br>
+              <br>Figma
+              <br>300*400
+              <br>건강검진의 종류를 보여주며 방문 권장
+            </div>
+          </a>
+        </div>
+  
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/300x400 타이포그래픽_명함1.png" 
+            data-pswp-width="300" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/300x400 타이포그래픽_명함1.png"  alt="Wide image" />
+            <div class="pswp-caption-content">
+              <b>개인 명함 제작</b><br>
+              <br>Figma
+              <br>300*400
+              <br>Typography로 개인 명함 디자인
+            </div>
+          </a>
+        </div>
+  
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/300x400 타이포그래픽_명함2.png" 
+            data-pswp-width="300" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/300x400 타이포그래픽_명함2.png"  alt="" />
+            <div class="pswp-caption-content">
+              <b>개인 명함 제작</b><br>
+              <br>Figma
+              <br>300*400
+              <br>Typography로 개인 명함 디자인
+            </div>
+          </a>
+        </div>
+      
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/300x400 타이포그래픽_세잔IT.png" 
+            data-pswp-width="300" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/300x400 타이포그래픽_세잔IT.png"  alt="Demo image 8" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>학원 홍보 카드</b><br>
+            <br>Figma
+            <br>300*400
+            <br>세잔IT직업전문학교에 관한 내용을 담아 홍보 카드 제작
+          </div>
+        </div>
+  
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/300x400 타이포그래픽_피그마튜터.png" 
+            data-pswp-width="300" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/300x400 타이포그래픽_피그마튜터.png" alt="Large 1500x1500 square" />
+            <div class="pswp-caption-content">
+              <b>Figma튜터</b><br>
+              <br>Figma
+              <br>300*400
+              <br>Figma튜터를 통해 쉽게 Figma를 배울 수 있다는 것을 알리기 위한 카드뉴스
+            </div>
+          </a>
+        </div>
+        
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/400x400_농협.png" 
+            data-pswp-width="400" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/400x400_농협.png"  alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>은행 홍보 카드</b><br>
+            <br>Photoshop
+            <br>400*400
+            <br>은행의 새로운 적금 안내/홍보
+          </div>
+        </div>
+
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/400x400_국세청.png" 
+            data-pswp-width="400" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/400x400_국세청.png"  alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>모범납세자 신청 카드</b><br>
+            <br>Photoshop
+            <br>400*400
+            <br>모범납세자들이 신청할 수 있도록 홍보/안내를 위한 카드 뉴스
+          </div>
+        </div>
+        
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/400x400_스즈키.png" 
+            data-pswp-width="400" 
+            data-pswp-height="400" 
+            target="_blank">
+            <img src="./src/img/myDesign/400x400_스즈키.png"  alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>모터쇼 오픈 홍보</b><br>
+            <br>Photoshop
+            <br>400*400
+            <br>모터쇼 오픈 홍보/안내를 위한 카드 뉴스
+          </div>
+        </div>
+        
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/600x1000_축제배너.png" 
+            data-pswp-width="600" 
+            data-pswp-height="1000" 
+            target="_blank">
+            <img src="./src/img/myDesign/600x1000_축제배너.png"   alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>축제 홍보 배너</b><br>
+            <br>Photoshop
+            <br>600*1000
+            <br>행사 축제 홍보 및 안내를 위한 배너
+          </div>
+        </div>
+
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/600x150_국세청.png" 
+            data-pswp-width="600" 
+            data-pswp-height="150" 
+            target="_blank">
+            <img src="./src/img/myDesign/600x150_국세청.png"    alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>국세상담센터 홍보</b><br>
+            <br>Photoshop
+            <br>600*150
+            <br>126숫자를 "전화는 일리유"라는 언어유희로 기억에 남도록 디자인
+          </div>
+        </div>
+
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/600x150_농협.png" 
+            data-pswp-width="600" 
+            data-pswp-height="150" 
+            target="_blank">
+            <img src="./src/img/myDesign/600x150_농협.png"    alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>은행 적금&어플 홍보</b><br>
+            <br>Photoshop
+            <br>600*150
+            <br>은행 어플을 홍보하며 적금 가입 권장
+          </div>
+        </div>
+
+        <div class="pswp-gallery__item">
+          <a  
+            href="./src/img/myDesign/600x150_스즈키.png" 
+            data-pswp-width="600" 
+            data-pswp-height="150" 
+            target="_blank">
+            <img src="./src/img/myDesign/600x150_스즈키.png"    alt="Demo image 9" />
+          </a>
+          <div class="pswp-caption-content">
+            <b>모터쇼 홍보</b><br>
+            <br>Photoshop
+            <br>600*150
+            <br>첫 오픈행사를 강조하며 간결한 멘트로 중요한 정보만 전달
+          </div>
+        </div>
+
+      </div>    
+      
+
+    </div>
   </section>
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.3.0/dist/photoswipe-lightbox.esm.js';
+    import PhotoSwipeDynamicCaption from './src/js/module.js';
+
+    const smallScreenPadding = {
+      top: 0, bottom: 0, left: 0, right: 0
+    };
+    const largeScreenPadding = {
+      top: 30, bottom: 30, left: 0, right: 0
+    };
+    const lightbox = new PhotoSwipeLightbox({
+      gallerySelector: '#gallery',
+      childSelector: '.pswp-gallery__item',
+      
+      // optionaly adjust viewport
+      paddingFn: (viewportSize) => {
+        return viewportSize.x < 700 ? smallScreenPadding : largeScreenPadding
+      },
+      pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5.3.0/dist/photoswipe.esm.js')
+    });
+
+    const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+      mobileLayoutBreakpoint: 700,
+      type: 'auto',
+      mobileCaptionOverlapRatio: 1
+    });
+
+    lightbox.init();
+    </script>
 
   <footer id="footer" class="container">
     <div class="footer_container">

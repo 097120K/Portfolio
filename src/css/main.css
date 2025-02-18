@@ -22,6 +22,7 @@ body{
 }
 html {
   scroll-behavior: smooth;
+  width: 100%; margin: 0 auto;
 }
 .bar-ing {
   position: fixed;
@@ -199,11 +200,11 @@ h3.title.change:hover {
 .title_div {
   position: absolute;
   top: -3rem; right: -7rem;
-  width: 7rem; height: 7rem;
+  /* width: 6rem; height: 6rem; */
   padding: 5px; box-sizing: border-box;
   border-radius: 50%;
   background: #000; color: #fff;
-  text-align: center; line-height: 6rem; font-size: 1rem;
+  text-align: center; line-height: 5rem; font-size: 1rem;
   cursor: pointer; transition: 1s;
   animation: bounce 0.5s 0.1s cubic-bezier(0, 0, 0.18, 0.99) infinite alternate;
 }
@@ -398,18 +399,17 @@ h3.title.change:hover {
 }
 
 
-#myDesign {
+/* #myDesign {
   width: 100%; margin: 200px 0;
   display: flex; align-items: center; justify-content: center;
-  /* outline: 1px dotted red; */
 }
 .myDesignWrap {
   width: 80%; margin-right: 150px;
-  column-count: 3;
-  column-gap: 15px;
+  column-count: 4;
+  column-gap: 30px;
 }
 .image-container {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   position: relative;
   overflow: hidden;
   border-radius: 5px;
@@ -433,11 +433,85 @@ h3.title.change:hover {
   opacity: 0; transition: opacity 0.3s ease;
   display: flex; flex-direction: column; gap: 5px;
   justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
 }
 .image-container:hover .image-text {
   opacity: 1;
 }
+.image-container .big_img {
+  position: absolute; 
+  outline: 2px dotted red;
+} */
+
+#myDesign {
+  width: 100%; margin: 300px 0;
+  display: flex; justify-content: center; align-items: center;
+}
+.pswp-gallery__items{
+  width: 80%; margin:0 auto; padding-right: 150px;
+  column-count: 4;
+  column-gap: 30px;
+}
+.pswp-gallery__item {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pswp-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.pswp__dynamic-caption {
+  color: #fff;
+  width: 100%;
+  /* outline: 5px dotted red; */
+}
+.pswp__dynamic-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+.pswp__dynamic-caption {
+  color: #fff;
+  position: absolute;
+  width: 100%; 
+  left: 0; top: 0; right: 0; bottom: 0;
+  transition: opacity 120ms linear !important; /* override default */
+}
+.pswp-caption-content {
+  display: none;
+}
+.pswp__dynamic-caption--faded {
+  opacity: 0 !important;
+}
+.pswp__dynamic-caption--aside {
+  width: auto;
+  max-width: 300px;
+  padding: 20px 15px 20px 20px;
+}
+.pswp__dynamic-caption--below {
+  width: auto;
+  max-width: 700px;
+  padding: 15px 0 0;
+}
+.pswp__dynamic-caption--on-hor-edge {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.pswp__dynamic-caption--mobile {
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  right: 0;
+  bottom: 0;
+  /* override styles that were set via JS.
+    as they interfere with size measurement */
+  top: auto !important; 
+  left: 0 !important;
+}
+
 
 footer {
   text-align: center;
@@ -550,6 +624,12 @@ footer a:hover {
     gap: 5px;
     /* outline: 1px dotted red; */
   }
+
+  .pswp-gallery__items{
+    width: 80%; margin:0 auto; padding-right: 150px;
+    column-count: 3;
+    column-gap: 30px;
+  }
 }
 @media screen and (max-width:1200px) {
   .aboutMe_container {
@@ -585,14 +665,10 @@ footer a:hover {
   }
 
 
-  .myDesignWrap {
-    width: 80%; margin-right: 0;
-    column-count: 2;
-    column-gap: 10px;
-  }
-  .image-text {
-    height: 100%;
-    font-size: 14px;
+  .pswp-gallery__items{
+    width: 80%; margin:0 auto; padding-right: 0;
+    column-count: 3;
+    column-gap: 20px;
   }
 }
 @media screen and (max-width: 767px) { 
@@ -636,6 +712,10 @@ footer a:hover {
     width: 12px; height: 12px;
   }
 
+  .pswp-gallery__items{
+    column-count: 2;
+    column-gap: 20px;
+  }
 } 
 @media (max-width: 575px) {
   .skills_wrap h4 {
@@ -661,16 +741,8 @@ footer a:hover {
     font-size: 14px;
   }
 
-  .myDesignWrap {
+  .pswp-gallery__items{
     column-count: 1;
-    column-gap: 10px;
+    column-gap: 20px;
   }
 } 
-@media (max-width: 320px) {
-  .slide__text .slide__text-inner h4 {
-    font-size: 16px; 
-  }
-  .slide__text .slide__text-inner p {
-    font-size: 12px;
-  }
-}
