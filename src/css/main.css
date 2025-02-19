@@ -183,7 +183,7 @@ html {
 h3.title {
   width: 100%; margin-bottom: 50px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   /* outline: 1px dotted red; */
 }
 h3.title.change {
@@ -342,6 +342,7 @@ h3.title.change:hover {
 .slide__text {
   width: 30%;
   display: flex; justify-content: center; align-items: center;
+  /* outline: 1px dotted red; */
 }
 .slide__text .slide__text-inner h4 {
   margin-bottom: 50px;
@@ -360,7 +361,7 @@ h3.title.change:hover {
   margin-bottom: 50px;
 }
 .myWork .slide__text-inner .btn {
-  display: flex; gap: 20px;
+  display: flex; gap: 20px; flex-direction: row;
   align-items: center; justify-content: center;
   /* outline: 1px dotted red; */
 }
@@ -398,49 +399,6 @@ h3.title.change:hover {
   background: #393E46;
 }
 
-
-/* #myDesign {
-  width: 100%; margin: 200px 0;
-  display: flex; align-items: center; justify-content: center;
-}
-.myDesignWrap {
-  width: 80%; margin-right: 150px;
-  column-count: 4;
-  column-gap: 30px;
-}
-.image-container {
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-.image-container:hover img {
-  transform: scale(1.1);
-}
-.image-text {
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); color: #fbfbfb;
-  padding: 10px; font-size: 16px; box-sizing: border-box;
-  opacity: 0; transition: opacity 0.3s ease;
-  display: flex; flex-direction: column; gap: 5px;
-  justify-content: center; align-items: center;
-}
-.image-container:hover .image-text {
-  opacity: 1;
-}
-.image-container .big_img {
-  position: absolute; 
-  outline: 2px dotted red;
-} */
 
 #myDesign {
   width: 100%; margin: 300px 0;
@@ -677,7 +635,12 @@ footer a:hover {
     /* outline: 1px dotted blue; */
   }
   h3.title {
-    font-size: 20px;
+    font-size: 30px;
+  }
+  .title_div {
+    width: 80px; height: 80px;
+    top: -80px; right: calc(50% - 40px);
+    line-height: 70px; font-size: .8rem;
   }
   .subTitle {
     font-size: 14px;
@@ -685,8 +648,6 @@ footer a:hover {
   .basic_mine {
     gap: 10px;
     /* outline: 1px dotted green; */
-  }
-  .basic_mine .text {
   }
   .basic_mine .text .name.en {
     margin-bottom: 20px;
@@ -718,6 +679,10 @@ footer a:hover {
   }
 } 
 @media (max-width: 575px) {
+  h3.title {
+    font-size: 25px;
+  }
+
   .skills_wrap h4 {
     font-size: 18px;
     /* outline: 1px dotted red; */
@@ -734,8 +699,12 @@ footer a:hover {
     /* outline: 1px dotted red; */
   }
 
+  .myWork .slide__text-inner .btn {
+    flex-direction: column;
+    /* outline: 1px dotted red; */
+  }
   .slide__text .slide__text-inner h4 {
-    font-size: 18px; 
+    font-size: 16px; 
   }
   .slide__text .slide__text-inner p {
     font-size: 14px;
@@ -746,3 +715,13 @@ footer a:hover {
     column-gap: 20px;
   }
 } 
+@media screen and (max-width:440px) {
+  #header nav ul li {
+    font-size: .8rem;
+    }
+  .title_div {
+    width: 60px; height: 60px;
+    top: -80px; right: calc(50% - 40px);
+    line-height: 50px; font-size: .7rem;
+  }
+}
