@@ -58,6 +58,7 @@ html {
   transform: scale(1.2);
   /* outline: 2px dotted red; */
 }
+
 #header nav ul {
   display: flex; flex-direction: column; gap: 100px;
   margin-top: 200px;
@@ -78,37 +79,34 @@ html {
   text-shadow: 0px 0px 25px #135;
 }
 @media screen and (max-width : 1200px) {
+  #Big_header {
+    height: 100px;
+    background: none; position: relative;
+    /* outline: 1px dotted red; */
+  }
   #header {
-    position: fixed;
-    top: 35px; left: 20px;
-    z-index: 200;
-    /* outline: 2px dotted red; */
-  }
-  #header .title a div {
-    width: 80px; height: 80px;
-    top: -25px; right: 15px;
-  }
-  .header {
-    width: 100%;
-    display: flex; justify-content: space-between;
-    align-items: center;
-    /* outline: 2px dotted red; */
+    position: absolute;
+    top: 20px; left: 80%;
+    /* outline: 1px dotted red; */
   }
   #header nav ul {
-    display: flex; flex-direction: row; gap: 40px;
-    justify-content: center; align-items: center;
-    margin-top: 0;
+    display: none;
     /* outline: 2px dotted red; */
-  }
-  #header nav ul li {
-  font-size: 1.2rem;
   }
 }
 @media screen and (max-width : 575px) {
+  #Big_header {
+    height: 100px;
+    background: none; position: relative;
+    /* outline: 1px dotted red; */
+  }
+  #header {
+    position: absolute;
+    top: 0; left: 60%;
+    /* outline: 1px dotted red; */
+  }
   #header nav ul {
-    display: flex; flex-direction: column; gap: 10px;
-    justify-content: center; align-items: center;
-    margin-top: 0;
+    display: none;
     /* outline: 2px dotted red; */
   }
 }
@@ -127,7 +125,7 @@ html {
   position: absolute; 
   top: 50%; transform: translate(0, -50%);
   z-index: -1;
-  color: #efefef60;
+  color: #efefef80;
   font-weight: bold; /* text-align: center; */
   overflow: hidden;
   /* outline: 1px dotted red; */
@@ -171,7 +169,7 @@ html {
   /* outline: 1px dotted red; */
 }
 .aboutMe_main {
-  width: 100%;
+  width: 100%; position: relative;
   display: flex; flex-direction: row;
   justify-content: space-evenly; align-items: center;
   /* outline: 1px dotted red; */
@@ -193,7 +191,8 @@ h3.title.change {
   /* outline: 1px dotted red; */
 }
 h3.title.change:hover {
-  text-decoration: underline;
+  text-decoration: underline; 
+  text-underline-offset: 10px;
   cursor: pointer;
 }
 
@@ -225,6 +224,17 @@ h3.title.change:hover {
   display: none; opacity: 0;
   /* background: red; */
   /* outline: 1px dotted red; */
+}
+.mine_wrap .click {
+  position: absolute;
+  top: 50px; right: 700px;
+  animation: bounce2 0.5s 0.1s cubic-bezier(0, 0, 0.99, 0.99) infinite alternate;
+}
+@keyframes bounce2{
+  to{
+    transform: translateX(-7px);
+      /* transform: translateY(-10px); */
+  }
 }
 .basic_mine {
   padding: 0 30px;
@@ -329,7 +339,7 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .myWork .slide {
-  display: flex; justify-content: center; align-items: center; gap: 50px;
+  display: flex; justify-content: center; align-items: center; gap: 30px;
   min-width: 100%;
   transition: 0.5s;
   /* outline: 1px dotted red; */
@@ -340,13 +350,14 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .slide__text {
-  width: 30%;
+  width: 30%; padding: 20px;
   display: flex; justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
+
 .slide__text .slide__text-inner h4 {
   margin-bottom: 50px;
-  font-size: 30px; text-align: center;
+  font-size: 30px; 
 }
 .slide__text .slide__text-inner p {
   font-size: 18px;
@@ -362,11 +373,11 @@ h3.title.change:hover {
 }
 .myWork .slide__text-inner .btn {
   display: flex; gap: 20px; flex-direction: row;
-  align-items: center; justify-content: center;
+  align-items: center; justify-content: start;
   /* outline: 1px dotted red; */
 }
 .myWork .slide-btn {
-  width: 140px; padding: 7px 0;
+  max-width: 140px; min-width: 100px; width: 100%; padding: 7px 0;
   background-color: #fff; border: none; outline: none;
   border-top: 1px solid #393E4640;
   border-bottom: 2px solid #393E4680;
@@ -375,6 +386,29 @@ h3.title.change:hover {
 }
 .slide-btn:hover {
   background: #ececec; color: #222;
+}
+/* 좌우이동 버튼 스타일 */
+.nav-buttons {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 95%;
+  display: flex; justify-content: space-between;
+  transform: translate(-50%, -50%);
+  /* outline: 1px dotted red; */
+}
+.nav-buttons button {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #393E46;
+  background: none;
+  border: none; border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav-buttons button:hover {
+  background-color: #393E4680; color: #fff;
 }
 /* 페이지네이션 버튼 스타일 */
 .pagination {
@@ -630,6 +664,17 @@ footer a:hover {
   }
 }
 @media screen and (max-width: 767px) { 
+  .text_box{
+    padding: 0 30px;
+    text-align: center;
+    /* outline: 1px dotted red; */
+  }
+  .text_box .text {
+    font-size: 4rem;
+  }
+  .blink {
+    font-size: 5rem;
+  }
   .aboutMe_main {
     gap: 20px;
     /* outline: 1px dotted blue; */
@@ -679,10 +724,15 @@ footer a:hover {
   }
 } 
 @media (max-width: 575px) {
+  .text_box .text {
+    font-size: 3rem;
+  }
+  .blink {
+    font-size: 4rem;
+  }
   h3.title {
     font-size: 25px;
   }
-
   .skills_wrap h4 {
     font-size: 18px;
     /* outline: 1px dotted red; */
@@ -698,11 +748,6 @@ footer a:hover {
     font-size: 15px;
     /* outline: 1px dotted red; */
   }
-
-  .myWork .slide__text-inner .btn {
-    flex-direction: column;
-    /* outline: 1px dotted red; */
-  }
   .slide__text .slide__text-inner h4 {
     font-size: 16px; 
   }
@@ -716,9 +761,6 @@ footer a:hover {
   }
 } 
 @media screen and (max-width:440px) {
-  #header nav ul li {
-    font-size: .8rem;
-    }
   .title_div {
     width: 60px; height: 60px;
     top: -80px; right: calc(50% - 40px);

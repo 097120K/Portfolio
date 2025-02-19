@@ -1,3 +1,6 @@
+/* header */
+
+
 /* main 페이지 타이핑 글자 */
 const txtWrap = document.querySelector('.text');
 const txtString = "Hello.  I'm MinJ_K."; /*  \n */
@@ -27,26 +30,8 @@ function typingEvent(){
 
 let setTyping = setInterval(typingEvent, txtSpeed);
 
-/* 상단 bar-ing */
-/* let scrollTop = 0;
-let bar;
 
-window.onload = function () {
-  bar = document.getElementsByClassName("bar-ing")[0];
-};
-
-window.addEventListener(
-  "scroll",
-  () => {
-    scrollTop = document.documentElement.scrollTop; // y축 방향으로 얼만큼 스크롤했는지!
-    let per = Math.ceil(
-      (scrollTop / (document.body.scrollHeight - window.outerHeight)) * 100
-    );
-    bar.style.width = per+"%";
-  },
-  false
-); */
-
+/* bar-ing */
 document.addEventListener("DOMContentLoaded", function () {
   const bar = document.querySelector(".bar-ing"); // 클래스 선택 최적화
 
@@ -62,12 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
 /* aboutMe h3.title click */
 const title_div = document.querySelector('.title_div');
 const h3El = document.querySelector('h3.title');
 const subTitle = document.querySelector('p.subTitle');
 const aboutMe_sub = document.querySelector('.mine_wrap');
 const aboutMe_skills = document.querySelector('.aboutMe_skills');
+const aboutMe_container = document.querySelector('.aboutMe_container');
 
 /* aboutMe div click */
 title_div.addEventListener('click',()=>{
@@ -90,6 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
   const slides = document.querySelectorAll(".slide");
   const pagination = document.querySelector(".pagination");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
   let currentIndex = 0;
 
@@ -111,6 +101,18 @@ document.addEventListener("DOMContentLoaded", function () {
           btn.classList.toggle("active", i === currentIndex);
       });
   }
+
+  // 이전 버튼 클릭 이벤트
+  prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+      updateSlide();
+  });
+
+  // 다음 버튼 클릭 이벤트
+  nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+      updateSlide();
+  });
 
   // 초기 상태 업데이트
   updateSlide();
