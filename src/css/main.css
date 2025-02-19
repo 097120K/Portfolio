@@ -339,10 +339,10 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .myWork .slide {
-  display: flex; justify-content: center; align-items: center; gap: 30px;
-  min-width: 100%;
+  display: flex; justify-content: center; align-items: center; 
+  min-width: 100%; height: 100%;
   transition: 0.5s;
-  /* outline: 1px dotted red; */
+  /* outline: 1px dotted blue; */
 }
 .slide img {
   width: 50%;
@@ -350,17 +350,19 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .slide__text {
-  width: 30%; padding: 20px;
+  width: 30%; 
+  padding: 0 50px ;
   display: flex; justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
 
 .slide__text .slide__text-inner h4 {
   margin-bottom: 50px;
-  font-size: 30px; 
+  font-size: 30px; text-align: center;
 }
 .slide__text .slide__text-inner p {
-  font-size: 18px;
+  font-size: 18px; text-align: center;
+  /* outline: 1px dotted red; */
 }
 .slide__text .slide__text-inner p:nth-of-type(1) {
   margin-bottom: 30px;
@@ -373,7 +375,7 @@ h3.title.change:hover {
 }
 .myWork .slide__text-inner .btn {
   display: flex; gap: 20px; flex-direction: row;
-  align-items: center; justify-content: start;
+  align-items: center; justify-content: center;
   /* outline: 1px dotted red; */
 }
 .myWork .slide-btn {
