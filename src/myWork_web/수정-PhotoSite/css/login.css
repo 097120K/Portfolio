@@ -1,0 +1,309 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* 글자서식 */
+body {font: 12px "돋움",dotum,sans-serif;color: #333;}
+small {font-size: medium;}
+address {font-style: normal;}
+hr {color: #757473;}
+/* 공통서식 */
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+    /* outline: 1px dotted red; */
+}
+.clearFix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 레이아웃 */
+header{
+  height: 100px;
+}
+header .logo { 
+  float: left; width: 200px; height: 100px; 
+  display: block;
+  padding-left: 25px;
+  box-sizing: border-box;
+  /* outline: 1px dotted blue;  */
+}
+header .logo a img {
+  transition: .5s;
+}
+header .logo a:hover img {
+  transform: scale(0.8);
+}
+header nav {
+  float: left;
+  left: 0;
+  width: 1000px; height: 100px; 
+  /* outline: 1px dotted blue; */
+}
+header nav .sign {
+  position: relative;
+  top: 10px;
+  height: 25px;
+  font-size: 14px;
+  /* outline: 1px dotted red; */
+}
+header nav .sign li {
+  float: right;
+  width: 50px;
+  height: 25px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 25px;
+  /* outline: 1px dotted blue; */
+}
+header nav .sign li:hover a {
+  text-decoration: underline;
+}
+/* 1 */
+header nav ul.menulist>li {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 50px;
+  top: 25px;
+  font-size: 30px;
+  /* outline: 1px dotted green; */
+}
+header nav ul.menulist>li:hover>a {
+  transform: translate(0, -15px) ;
+}
+header nav ul.menulist>li>.bg_box {
+  background: rgba(60, 61, 55, .5);
+  z-index: 30;
+  display: none;
+  width: 100%;height: 30%;
+  position: fixed;
+  top: 100px;
+  left: 0;
+}
+header nav ul.menulist:hover>li>.bg_box{
+  display: block;
+}
+header nav ul.menulist>li>a {
+  display: block;
+  float: left;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  /* outline: 1px dotted green ; */
+}
+/* 2 */
+header nav ul.menulist>li>ul {
+  position: absolute;
+  z-index: 30;
+  display: none;
+  top: 50px;
+  left: 0;
+  width: 100%; height: 20%;
+  /* outline: 1px dotted green; */
+}
+header nav ul.menulist:hover>li>ul {
+  display: block;
+}
+header nav ul.menulist>li>ul.sublist li a:hover {
+  text-decoration: underline;
+  color: #ffffff; 
+  font-weight: normal;
+}
+header nav ul.menulist>li>ul.sublist li a {
+  display: block;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 15px;
+  color: #fff;
+  /* outline: 1px dotted orange; */
+}
+
+/* container Area */
+#container {
+  /* outline: 1px dotted red; */
+}
+#container .box {
+  margin: 80px auto 80px;
+  width: 600px;
+  background: rgba(228,224,225,.2);
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  /* outline: 1px dotted green; */
+}
+#container .box:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#container .box h2 {
+  padding: 100px 0 50px;
+  text-align: center;
+  font-size: 30px;
+  box-sizing: border-box;
+  /* outline: 1px dotted blue; */
+}
+#container #input {
+  margin-bottom: 10px;
+  /* outline: 1px dotted red; */
+}
+#container input[type="text"],input[type="password"]  {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  /* outline: 1px dotted blue; */
+}
+#container #checkbox {
+  margin:0 auto 50px;
+  width: 400px;
+  /* outline: 1px dotted red; */
+}
+
+#container #checkbox span {
+  font-size: 13px;
+}
+#container #btn_login button {
+  margin-left: 100px;
+  width: 400px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* outline: 1px dotted blue; */
+}
+#container #btn_login .login a {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #333333;
+  color: #fff;
+  line-height: 40px;
+  /* outline: 1px dotted blue; */
+}
+#container #btn_login .login:hover a {
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px #999999;
+}
+
+#container p#or {
+  margin: 30px auto;
+  text-align: center;
+  height: 20px;
+  /* outline: 1px dotted blue; */
+}
+#container #snslogin {
+  /* outline: 1px dotted blue; */
+}
+#container #snslogin .img {
+  margin: 0 auto 30px;
+  padding-left: 160px;
+  /* outline: 1px dotted blue; */
+}
+#container #snslogin img {
+  float: left;
+  display: block;
+  margin: 10px 10px;
+  filter: drop-shadow(3px 1px 1px #999999);
+}
+#container #snslogin img:hover {
+  filter: drop-shadow(5px 3px 3px #777777);
+}
+#container .snslogin a {
+  margin: 10px;
+}
+
+#container p.pw{
+  font-size: 13px;
+  text-align: center;
+  /* outline: 1px dotted blue; */
+}
+#container p.pw span {
+  font-weight: bold;
+  font-size: 14px;
+}
+#container p.pw:hover {
+  text-decoration: underline;
+  text-shadow: 0px 0px 1px #757473;
+  color: #757473;
+  font-weight: bold;
+}
+#container p.join {
+  margin: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 13px;
+  /* outline: 1px dotted blue; */
+}
+#container p.join:hover {
+  text-decoration: underline;
+  color: #757473;
+  font-weight: bold;
+}
+#container p.join span {
+  font-weight: bold;
+  font-size: 14px;
+}
+#container p.join:hover span {
+  text-decoration: underline;
+  text-shadow: 0px 0px 1px #757473;
+  color: #757473;
+  font-weight: bold;
+}
+
+#container #imgbox {
+  display: inline-block;
+  width: 443px;
+  margin: 0 70.5px 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #444;
+  background: rgba(228,224,225,.2);
+}
+#container #imgbox .banner {
+  width: 500px;
+  height: 128px;
+  overflow: hidden;
+}
+#container #imgbox .banner ul {
+  width: 500px;
+  height: 256px;
+  position: relative;
+}
+#container #imgbox .banner ul li {
+  width: 443px;
+  height: 128px;
+  float: left;
+}
+
+
+/* footer Area */
+.bgBox {
+  background:rgba(60, 61, 55, .5);
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+}
+footer {
+  /* outline: 1px dotted blue;s */
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+}
+footer address {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+}
+footer small {
+  display: block;
+  padding: 10px;
+  font-size: 12px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Site - login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    
+    setInterval(function(){
+        $('div.banner ul').animate({
+            top: "-128"
+        },800,function(){
+            $('div.banner ul').append($('div.banner ul li').eq(0));
+            $('div.banner ul').css("top",0);
+        })
+    },2000);
+})
+
+    </script>
+</head>
+    <body>
+        <div id="all" class="clearFix">
+            <header class="inner">
+                <div class="logo">
+                  <a href="./index.html">
+                    <img src="./images/logo.png" alt="logo" width="180">
+                  </a>
+                </div>
+                <nav>
+                  <ul class="sign clearFix">
+                    <li><a href="./join.html">Join</a></li>
+                    <li><a href="./login.html">Login</a></li>
+          
+                  </ul>
+                    <ul class="menulist">
+                      <li>
+                        <a href="#">About</a>
+                        <div class="bg_box"></div>
+                        <ul class="sublist">
+                          <li><a href="#">작가 소개</a></li>
+                          <li><a href="#">장비 & 촬영 스타일</a></li>
+                          <li><a href="#">작업 과정</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Portfolio</a>
+                        <ul class="sublist">
+                          <li><a href="#">인물</a></li>
+                          <li><a href="#">웨딩 & 커플</a></li>
+                          <li><a href="#">패션 & 광고</a></li>
+                          <li><a href="#">다큐멘터리 & 스트리트</a></li>
+                          <li><a href="#">자연 & 여행</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Services</a>
+                        <ul class="sublist">
+                          <li><a href="#">개인 촬영</a></li>
+                          <li><a href="#">커플 & 가족 촬영</a></li>
+                          <li><a href="#">촬영 패키지 & 가격 안내</a></li>
+                          <li><a href="#">예약 & 문의</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Contact</a>
+                        <ul class="sublist">
+                          <li><a href="#">연락처 & SNS</a></li>
+                          <li><a href="#">예약 신청</a></li>
+                          <li><a href="#">자주 묻는 질문 (FAQ)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </nav>
+              </header>
+            </div>
+            <hr>
+            <div id="container" class="inner">
+                <div class="box">
+                <h2>LOGIN</h2>
+                <div id="input">
+                    <input type="text"  placeholder="ID or E-mail"><br>
+                    <input type="password" placeholder="Password">
+                </div>
+                <div id="checkbox">
+                    <p class="checkbox"><input type="checkbox">  <span>로그인 정보 저장</span></p>
+                </div>
+                <div id="btn_login">
+                    <button class="login"><a href="#">로그인</a></button>
+                </div>
+                <p id="or">or</p>
+                <div id="snslogin">
+                    <div class="img clearFix">
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" target="_blank"><img src="./images/naver_login.png" alt="네이버로그인"></a>
+                        <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fe.kakao.com%2F#login" target="_blank"><img src="./images/kakao_login.png" alt="카카오로그인"></a>
+                        <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3DOGB%26utm_medium%3Dapp%26pli%3D1&ec=GAlAwAE&hl=ko&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-787324522%3A1728643006375829&ddm=0" target="_blank"><img src="./images/google_login.png" alt="구글로그인"></a>
+                        <a href="https://account.apple.com/sign-in" target="_blank"><img src="./images/apple_login.png" alt="애플로그인"></a>
+                    </div>
+                </div>
+                <p class="pw"><a href="./forgot.html">아이디 또는 비밀번호를 <span>잊으셨나요?</span></a></p>
+                <p class="join"><a href="./join.html">DCODELAB 회원이 아니십니까? 지금 <span>가입</span>하세요.</a></p>
+                <div id="imgbox">
+                    <div class="banner">
+                        <ul>
+                            <li><img src="./images/banner_all/banner (1).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (2).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (3).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (4).png" alt="" ></li>
+                            <li> <img src="./images/banner_all/banner (5).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (6).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (7).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (8).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (9).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (10).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (11).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (12).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (13).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (14).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (15).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (16).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (17).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (18).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (19).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (20).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (21).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (22).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (23).png" alt=""></li>
+                            <li><img src="./images/banner_all/banner (24).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (25).png" alt="" ></li>
+                            <li><img src="./images/banner_all/banner (26).png" alt="" ></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="bgBox">
+              <footer>
+                <address>Daejeon junggu youngduro | E-mail : 097120k@gmail.com |  Tel : 010-7175-3370</address>
+                <small>&copy; 2024.MinJ_K All right reserved.</small>
+              </footer>
+            </div>
+          </body>
+        </html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Site - join</title>
+  <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/join_2.css">
+    <script>
+        function fuc(domain){
+            document.form.textdirect.value = domain;
+        }
+    </script>
+</head>
+<body>
+    <div id="all" class="clearFix">
+        <header class="inner">
+            <div class="logo">
+            <a href="./index.html">
+                <img src="./images/logo.png" alt="logo" width="180">
+            </a>
+            </div>
+            <nav>
+                <ul class="sign clearFix">
+                    <li><a href="./join.html">Join</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+                <ul class="menulist">
+                    <li>
+                        <a href="#">About</a>
+                        <div class="bg_box"></div>
+                        <ul class="sublist">
+                            <li><a href="#">작가 소개</a></li>
+                            <li><a href="#">장비 & 촬영 스타일</a></li>
+                            <li><a href="#">작업 과정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                        <ul class="sublist">
+                            <li><a href="#">인물</a></li>
+                            <li><a href="#">웨딩 & 커플</a></li>
+                            <li><a href="#">패션 & 광고</a></li>
+                            <li><a href="#">다큐멘터리 & 스트리트</a></li>
+                            <li><a href="#">자연 & 여행</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                        <ul class="sublist">
+                            <li><a href="#">개인 촬영</a></li>
+                            <li><a href="#">커플 & 가족 촬영</a></li>
+                            <li><a href="#">촬영 패키지 & 가격 안내</a></li>
+                            <li><a href="#">예약 & 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                        <ul class="sublist">
+                            <li><a href="#">연락처 & SNS</a></li>
+                            <li><a href="#">예약 신청</a></li>
+                            <li><a href="#">자주 묻는 질문 (FAQ)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <hr class="header_line">
+
+        <div id="container" class="inner">
+            <div class="mid_header">
+                <h2>회원가입</h2>
+            </div>
+            <hr class="first_line">
+            <div class="img">
+                <img src="./images/signin.png" alt="">
+            </div>
+            <div class="second">
+                <h3>회원정보 입력</h3>
+                <p>
+                    회원가입에 필요한 정보를 입력합니다.<br>
+                    Enter the information required for membership registration.
+                </p>
+            </div>
+            <form action="#" method="get" name="form" class="inner_in">
+            <div class="id">
+                <p><span>*</span> 아이디 ID</p>
+                <input type="text" placeholder="3~15자 영문, 숫자 " maxlength="15" required><button onclick="alert('입력하신 ID는 사용가능합니다.')"><a href="#">중복확인</a></button>
+            </div>
+            <div class="pw">
+                <p><span>*</span> 비밀번호 Password</p>
+                <input type="password" placeholder="8~15자 이내의 영문, 숫자, 특수문자의 조합으로 입력" maxlength="15" class="textbox" required>
+            </div>
+            <div class="pwcheck">
+                <p><span>*</span> 비밀번호 확인 Password Check</p>
+                <input type="password" placeholder="확인을 위해 비밀번호와 동일하게 입력" maxlength="32" required ><button onclick="alert('비밀번호가 일치합니다.')"> <a href="#">확인</a></button>
+            </div>
+            <div class="name">
+                <p><span>*</span> 이름 Name</p>
+                <input type="text" placeholder="한글/영문으로 입력." class="textbox" required>
+            </div>
+            <div class="email">
+                <p><span>*</span> 이메일 E-mail</p>
+                <input type="text" required> @ <input type="text" name="textdirect" id="textdirect" required>
+                <select id="selbox" name="selbox" onchange="fuc(this.value)">
+                    <option value="" selected> 이메일 주소 선택 </option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value=""> 직 접 입 력 </option>
+                </select>
+            </div>
+            <div class="number">
+                <p><span>*</span> 핸드폰번호 Phone Number</p>
+                <input type="text" placeholder="-없이 입력해주세요." class="textbox" >
+            </div>
+            <div class="address">
+                <p>주소</p>
+                <input type="text" placeholder="우편번호"><button><a href="https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm" target="_blank" >우편번호 찾기</a></button><br>
+                <input type="text" placeholder="주소를 입력해주세요." class="textbox">
+            </div>
+        </form>
+        <hr>
+        <div class="btn">
+            <a href="./join.html" class="cancel">뒤로</a>
+            <a href="./join_3.html" class="next" type="submit">다음</a>
+        </div>
+        </div>
+            
+        <div class="bgBox">
+            <footer>
+                <address>Daejeon junggu youngduro | E-mail : 097120k@gmail.com |  Tel : 010-7175-3370</address>
+                <small>&copy; 2024.MinJ_K All right reserved.</small>
+            </footer>
+        </div>
+    </body>
+</html>
