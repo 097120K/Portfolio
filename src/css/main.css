@@ -24,6 +24,9 @@ html {
   scroll-behavior: smooth;
   width: 100%; margin: 0 auto;
 }
+.container {
+  display: flex; justify-content: center; align-items: center;
+}
 .bar-ing {
   position: fixed;
   top: 10px; left: 0; z-index: 1;
@@ -31,94 +34,79 @@ html {
   border: 4px solid #393E46;
   box-sizing: border-box;
 }
-.container {
-  display: flex; justify-content: center; align-items: center;
-}
-
 
 
 /* HEADER */
-#Big_header {
-  background: #fbfbfb;
+.showMenu {
+  position: fixed;
+  top: 15px; left: 0px; z-index: 1;
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; align-items: start;
   /* outline: 1px dotted red; */
 }
-#header {
+.showMenu .hamburger_icon {
+  padding-right: 50px;
+  cursor: pointer;
+}
+/* hamburger */
+.hamburger .clickMenu {
+  width: 100%; 
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: end;
+  background: #fefefe;
+  /* outline: 1px dotted red; */
+}
+.topBox {
+  width: 100%; 
+  display: flex; flex-direction: row-reverse;
+  justify-content: space-between; align-items: start;
+  /* outline: 1px dotted red; */
+}
+.xBox {
+  padding: 20px 50px;
+  cursor: pointer;
+}
+.logoBox {
+  padding: 0 30px;
+}
+.hamburger {
+  display: none;
+  width: 100%;
   position: fixed;
-  top: 50px; right: 20px;
-  z-index: 1;
+  top: 0; left: 0; z-index: 10;
+  /* outline: 1px dotted red; */
 }
-#header .title a {
-  position: relative;
-  /* outline: 2px dotted red; */
+.hamburger.show {
+  display: block;
 }
-#header .title a img{
-  transition: .5s;
+.hamburger .clickMenu ul {
+  width: 100%;
+  text-align: center;
+  /* outline: 1px dotted red; */
 }
-#header .title a img:hover {
-  transform: scale(1.2);
-  /* outline: 2px dotted red; */
+.hamburger .clickMenu ul li {
+  width: 100%; height: 100%;
+  transition: .5s; font-size: 1.2rem;
+  box-sizing: border-box;
+  /* outline: 1px dotted red; */
 }
-
-#header nav ul {
-  display: flex; flex-direction: column; gap: 100px;
-  margin-top: 200px;
-  /* outline: 2px dotted red; */
+.hamburger .clickMenu ul li:hover {
+  background: #393E4640; color: #f9f9f9;
+  /* outline: 1px dotted red; */
 }
-#header nav ul li {
-  position: relative;
-  text-align: right; 
-  font-size: 2rem;
-  text-shadow: 0px 0px 25px #393E46;
-  transition: .3s;
-}
-#header nav ul li:hover {
-  font-weight: bold;
-  text-shadow: none;
-}
-.sectionBtn.active {
-  text-shadow: 0px 0px 25px #135;
-}
-@media screen and (max-width : 1200px) {
-  #Big_header {
-    height: 100px;
-    background: none; position: relative;
-    /* outline: 1px dotted red; */
-  }
-  #header {
-    position: absolute;
-    top: 20px; left: 80%;
-    /* outline: 1px dotted red; */
-  }
-  #header nav ul {
-    display: none;
-    /* outline: 2px dotted red; */
-  }
-}
-@media screen and (max-width : 575px) {
-  #Big_header {
-    height: 100px;
-    background: none; position: relative;
-    /* outline: 1px dotted red; */
-  }
-  #header {
-    position: absolute;
-    top: 0; left: 60%;
-    /* outline: 1px dotted red; */
-  }
-  #header nav ul {
-    display: none;
-    /* outline: 2px dotted red; */
-  }
+.hamburger .clickMenu ul li a {
+  display: block;
+  width: 100%; padding: 20px 0;
+  /* outline: 1px dotted red; */
 }
 
 
 /* MAIN */
 #main {
-  width: 100%; height: 100vh;
-  overflow: hidden;
+  padding: 400px 0;
   /* outline: 1px dotted red; */
 }
-
 #main h1 {
   width: 100%; height: 100%;
   font-size: 100px;
@@ -126,13 +114,8 @@ html {
   top: 50%; transform: translate(0, -50%);
   z-index: -1;
   color: #efefef80;
-  font-weight: bold; /* text-align: center; */
+  font-weight: bold; text-align: justify;
   overflow: hidden;
-  /* outline: 1px dotted red; */
-}
-.main {
-  width: 100%; height: 100%;
-  margin: 0 auto;
   /* outline: 1px dotted red; */
 }
 .text_box{
@@ -156,50 +139,45 @@ html {
 
 /* AboutMe_new */
 #aboutMe {
-  width: 100%; height: 100vh; 
+  padding-top: 400px;
+  width: 100%;
   display: flex; justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
+#aboutMe.padding {
+  padding-top: 200px;
+}
 .aboutMe_container {
-  width: 80%; height: 100%; 
-  margin-right: 100px;
-  position: relative;
+  width: 80%;
   display: flex; flex-direction: column; gap: 150px;
   justify-content: center; align-items: center;
-  /* outline: 1px dotted red; */
 }
 .aboutMe_main {
   width: 100%; position: relative;
   display: flex; flex-direction: row;
   justify-content: space-evenly; align-items: center;
-  /* outline: 1px dotted red; */
 }
 .title_wrap {
   position: relative;
-  /* background: yellow; */
 }
-h3.title {
+.title_wrap h3.title {
   width: 100%; margin-bottom: 50px;
   text-align: center;
   font-size: 2.5rem;
-  /* outline: 1px dotted red; */
 }
-h3.title.change {
+.title_wrap h3.title.change {
   text-align: left;
   color: #444;
   transition: 1s;
-  /* outline: 1px dotted red; */
 }
-h3.title.change:hover {
+.title_wrap h3.title.change:hover {
   text-decoration: underline; 
   text-underline-offset: 10px;
   cursor: pointer;
 }
-
 .title_div {
   position: absolute;
   top: -3rem; right: -7rem;
-  /* width: 6rem; height: 6rem; */
   padding: 5px; box-sizing: border-box;
   border-radius: 50%;
   background: #000; color: #fff;
@@ -303,7 +281,7 @@ h3.title.change:hover {
   /* outline: 1px dotted red; */
 }
 .skills_wrap .skill img {
-  margin: 0 auto 10px; display: block;
+  margin: 0 auto; display: block;
   width: 50px;
   /* outline: 1px dotted red; */
 }
@@ -316,15 +294,16 @@ h3.title.change:hover {
 
 
 #myWork {
-  width: 100%; height: 100vh;
-  margin: 0;
+  width: 100%; 
+  margin: 200px 0;
+  padding: 200px 0;
   display: flex; flex-direction: column; 
   justify-content: center; align-items: center;
   /* outline: 1px dotted red; */
 }
 .myWork {
   position: relative;
-  width: 80%; margin-right: 150px;
+  width: 80%; /* margin-right: 150px; */
   overflow: hidden;
   /* outline: 1px dotted red; */
 }
@@ -340,28 +319,31 @@ h3.title.change:hover {
 }
 .myWork .slide {
   display: flex; justify-content: center; align-items: center; 
+  gap: 80px;
   min-width: 100%; height: 100%;
   transition: 0.5s;
   /* outline: 1px dotted blue; */
 }
 .slide img {
-  width: 50%;
+  width: 45%;
   display: block;
   /* outline: 1px dotted red; */
 }
 .slide__text {
+  position: relative;
+  top: 0;
   width: 30%; 
-  padding: 0 50px ;
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: start; align-items: center;
   /* outline: 1px dotted red; */
 }
 
 .slide__text .slide__text-inner h4 {
-  margin-bottom: 50px;
-  font-size: 30px; text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
 }
 .slide__text .slide__text-inner p {
-  font-size: 18px; text-align: center;
+  line-height: 1.5;
+  font-size: 18px;
   /* outline: 1px dotted red; */
 }
 .slide__text .slide__text-inner p:nth-of-type(1) {
@@ -374,12 +356,14 @@ h3.title.change:hover {
   margin-bottom: 50px;
 }
 .myWork .slide__text-inner .btn {
+  width: 100%;
+  position: absolute;
+  bottom: -50px;
   display: flex; gap: 20px; flex-direction: row;
-  align-items: center; justify-content: center;
-  /* outline: 1px dotted red; */
+  align-items: center; justify-content: start;
 }
 .myWork .slide-btn {
-  max-width: 140px; min-width: 100px; width: 100%; padding: 7px 0;
+  max-width: 180px; min-width: 100px; width: 100%; padding: 7px 0;
   background-color: #fff; border: none; outline: none;
   border-top: 1px solid #393E4640;
   border-bottom: 2px solid #393E4680;
@@ -415,8 +399,8 @@ h3.title.change:hover {
 /* 페이지네이션 버튼 스타일 */
 .pagination {
   position: absolute;
-  top: 100px;
-  right: 0;
+  top: 50px;
+  right: 10px;
   transform: translateX(-50%);
   display: flex; flex-direction: row;
   gap: 5px;
@@ -437,11 +421,12 @@ h3.title.change:hover {
 
 
 #myDesign {
-  width: 100%; margin: 300px 0;
+  width: 100%; 
+  padding: 200px 0;
   display: flex; justify-content: center; align-items: center;
 }
 .pswp-gallery__items{
-  width: 80%; margin:0 auto; padding-right: 150px;
+  width: 80%; margin:0 auto;
   column-count: 4;
   column-gap: 30px;
 }
@@ -559,21 +544,17 @@ footer a:hover {
 }
 
 @media screen and (max-width:1440px) {
-  #aboutMe {
-    height: 200vh;
-  }
   .aboutMe_main {
-    margin-top: 100px;
     flex-direction: column; gap: 100px;
     /* outline: 1px dotted blue; */
   }
   .title_wrap {
     text-align: center;
   }
-  h3.title {
+  .title_wrap h3.title {
     margin-bottom: 30px;
   }
-  h3.title.change {
+  .title_wrap h3.title.change {
     text-align: center;
   }
   .skills_wrap {
@@ -581,15 +562,12 @@ footer a:hover {
     /* outline: 1px dotted red; */
   }
 
-  #myWork {
-    height: 100vh;
-  }
   .myWork .slide {
     flex-direction: column; gap: 0;
     /* outline: 1px dotted blue; */
   }
   .slide img{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     /* outline: 1px dotted red; */
   }
@@ -597,7 +575,7 @@ footer a:hover {
     width: 60%;
   }
   .myWork .slide__text .slide__text-inner h4 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size:28px; 
   }
   .slide__text .slide__text-inner p:nth-of-type(1) {
@@ -606,13 +584,20 @@ footer a:hover {
   .slide__text .slide__text-inner p:nth-of-type(2) {
     margin-bottom: 15px;
   }
-  .slide__text .slide__text-inner p:nth-of-type(3) {
-    margin-bottom: 20px;
+  .myWork .slide__text-inner .btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex; gap: 20px; flex-direction: row;
+    align-items: center; justify-content: start;
+  }
+  .slide__text {
+    justify-content: center;
   }
   .pagination {
     position: absolute;
     top: 0;
-    right: 50%;
+    right: 50%; 
     transform: translateX(50%);
     display: flex; flex-direction: row;
     gap: 5px;
@@ -626,6 +611,7 @@ footer a:hover {
   }
 }
 @media screen and (max-width:1200px) {
+
   .aboutMe_container {
     margin-right: 0; gap: 100px;
     /* outline: 1px dotted red; */
@@ -638,7 +624,7 @@ footer a:hover {
   .title_wrap {
     text-align: center;
   }
-  h3.title.change {
+  .title_wrap h3.title.change {
     text-align: center;
   }
   .subTitle {
@@ -649,16 +635,9 @@ footer a:hover {
     flex-direction: column-reverse; gap: 20px;
     /* outline: 1px dotted green; */
   }
-
-  .myWork {
-    margin-right: 0;
-    /* outline: 1px dotted red; */
-  }
   .slide img{
     width: 60%;
   }
-
-
   .pswp-gallery__items{
     width: 80%; margin:0 auto; padding-right: 0;
     column-count: 3;
@@ -681,7 +660,7 @@ footer a:hover {
     gap: 20px;
     /* outline: 1px dotted blue; */
   }
-  h3.title {
+  .title_wrap h3.title {
     font-size: 30px;
   }
   .title_div {
@@ -732,7 +711,7 @@ footer a:hover {
   .blink {
     font-size: 4rem;
   }
-  h3.title {
+  .title_wrap h3.title {
     font-size: 25px;
   }
   .skills_wrap h4 {
@@ -756,7 +735,6 @@ footer a:hover {
   .slide__text .slide__text-inner p {
     font-size: 14px;
   }
-
   .pswp-gallery__items{
     column-count: 1;
     column-gap: 20px;
@@ -767,5 +745,12 @@ footer a:hover {
     width: 60px; height: 60px;
     top: -80px; right: calc(50% - 40px);
     line-height: 50px; font-size: .7rem;
+  }
+  .myWork .slide__text-inner .btn {
+    margin: 0 auto;
+    position: absolute;
+    bottom: -50px;
+    display: flex; gap: 20px; flex-direction: row;
+    align-items: center; justify-content: center;
   }
 }
