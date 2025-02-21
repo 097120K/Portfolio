@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitable</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="nohero">
+  <header>
+    <div class="container">
+      <div class="container-small">
+        <a href="./index.html" class="headA">Fruitable</a>
+        <button type="button" class="headC"><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <nav class="headB">
+        <ul>
+          <li><a href="./index.html">홈</a></li>
+          <li><a href="./contents.html">생활정보</a></li>
+          <li><a href="./about.html">소개</a></li>
+          <li><a href="./contact.html">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <article class="post">
+    <div class="container">
+      <h1>신선함을 집까지! Fruitable</h1>
+      <p>
+        제철과일과 신선한 채소를 가장 맛있을 때, 가장 편리하게 만나보세요! 
+        <br>산지 직송으로 신선도를 유지하며, 엄선된 품질의 과일을 빠르게 배송해 드립니다.
+      </p>
+      <p>
+        ◆ 제철과일 & 유기농 채소 판매<br>
+        ◆ 신선 보장, 산지 직배송<br>
+        ◆ 간편한 주문 & 빠른 배송 서비스
+      </p>
+      <p>
+        지금 주문하고 자연이 주는 신선한 맛을 즐겨보세요!
+      </p>
+    </div>
+  </article>
+  <aside class="history">
+    <div class="container">
+      <div class="photo"></div>
+      <div class="text">
+        <h2>주문방법</h2>
+        <table>
+          <tr>
+            <th>1단계 :<br>상품 선택</th>
+            <td>
+              온라인 가게에 접속해 원하는 과일·채소 종류와 수량을 선택합니다.
+              (신선도, 원산지, 리뷰 등을 확인하면 더 좋은 상품을 고를 수 있습니다.)
+            </td>
+          </tr>
+          <tr>
+            <th>2단계 :<br>장바구니 담기<br>&주문하기</th>
+            <td>선택한 상품을 장바구니에 담고 주문하기 버튼을 클릭합니다.(추가 할인 쿠폰이나 프로모션이 있는지 확인하면 더욱 경제적입니다.)</td>
+          </tr>
+          <tr>
+            <th>3단계 : 결제 &<br>배송 정보 입력</th>
+            <td>이름, 주소, 연락처 등 배송 정보를 정확히 입력합니다. 카드 결제, 계좌이체, 간편결제(카카오페이, 네이버페이 등) 중 원하는 방법을 선택해 결제합니다.</td>
+          </tr>
+          <tr>
+            <th>4단계: <br>배송 확인 & 수령</th>
+            <td>주문 후 배송 일정과 상태를 확인합니다. 배송받은 후 신선도를 체크하고 이상이 있다면 고객센터에 문의합니다.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </aside>
+
+
+  <footer>
+    <div class="container">
+      <div class="footA">
+        <h2>Fruitable</h2>
+        <p>
+          주소 : 대전광역시 중구 선화동<br>
+          <a href="http://djcezanne.co.kr/">http://djcezanne.co.kr/</a>
+        </p>
+        <nav class="footD">
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="footB">
+        <div>
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="#">설립</a></li>
+            <li><a href="#">주소</a></li>
+            <li><a href="#">지도</a></li>
+            <li><a href="#">스태프</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><a href="#">다운로드</a></li>
+            <li><a href="#">메뉴얼</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+            <li><a href="#">문의</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>CONTENTS</h3>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">비즈니스</a></li>
+            <li><a href="#">프로필</a></li>
+            <li><a href="#">개발자</a></li>
+            <li><a href="#">블로그</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footC">
+        <small>&copy; Fruitable corp. ALL rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      $('.headC').click(function(){
+        $('.headB').stop().slideToggle();
+      })
+    })
+  </script>
+</body>
+</html>

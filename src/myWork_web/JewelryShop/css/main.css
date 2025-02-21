@@ -7,58 +7,47 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 body {font-family: "Orbitron", serif; background: #efefef;}
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* HEADER */
 header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0; right: 0;
   width: 400px; height: 100%;
   background: linear-gradient(45deg, #B9B28A, #504B38);
+  text-align: right;
 }
 header h1 {
   position: absolute;
-  top: 50%; left: 50px; 
+  top: 50%; right: 0px; 
   transform: translateY(-50%);
   font : bold 50px/1 'orbitron';
   color: #fff;
+  /* outline: 1px dotted red; */
 }
 header h1::before {
   position: absolute; 
-  left: 0; top: 140px;
+  right: 0; top: 100px;
   display: block;
   content: 'Jewelry Design shop';
   font :  14px/1 'orbitron';
   letter-spacing: 2px;
   opacity: .8;
+
 }
 header h1::after {
   display: block;
   content: '';
-  margin-top: 20px;
-  width: 150px; height: 2px;
+  margin:30px 0 0 250px;
+  width: 200px; height: 2px;
   background: #fff;
 }
-header ul {
-  position: absolute;
-  left: 40px; bottom: 100px;
-}
-header ul li {
-  float: left;
-  margin-right: 10px;
-  /* outline: 3px dotted red; */
-}
-header ul li a {
-  font:20px arial;
-  color: #fff;
-}
-header ul li a span {
-  display: inline-block;
-  font-weight: bold;
-  opacity: .7;
-  transform: scale(.7) translateX(-10px);
-}
+
 /* MAIN */
 main {
-  margin-left: 400px; padding: 20px;
+  margin-right: 400px; padding: 20px;
   box-sizing: border-box;
   /* outline: 3px dotted red; */
 }
@@ -132,8 +121,13 @@ main section article div p {
   header {
     width: 350px;
   }
+  header h1 {
+    right: 10px;
+    transform: translateY(-50%);
+    font : bold 40px/1 'orbitron';
+  }
   main {
-    margin-left: 350px;
+    margin-right: 350px;
   }
   main section article {
     width: 25%;
@@ -160,7 +154,6 @@ main section article div p {
   header ul li {
     margin-right: 20px;
   }
-  header ul li a {}
   header ul li a span {
     display: none;
   }
