@@ -47,6 +47,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/* 스크롤 내리면 로고 투명도 주기 */
+const logo = document.querySelector('.logo')
+const icon = document.querySelector('.hamburger_icon')
+
+window.addEventListener('scroll', function() {
+  // 스크롤바가 움직일 때마다 실행되어야 하기 때문에 이벤트리스너 사용
+    if (window.scrollY > 100) {
+      icon.style.opacity= '.3'
+      icon.addEventListener('mouseenter',()=>{
+        icon.style.opacity='1'
+      })
+      icon.addEventListener('mouseleave',()=>{
+        icon.style.opacity='.3'
+      })
+    } else if (window.scrollY < 100) {
+      icon.style.opacity = '1'
+    }
+  });
 
 
 /* aboutMe h3.title click */

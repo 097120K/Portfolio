@@ -42,13 +42,23 @@ html {
   top: 15px; left: 0px; z-index: 1;
   width: 100%; 
   display: flex; 
-  justify-content: space-between; align-items: start;
+  justify-content: flex-end; align-items: start;
   /* outline: 1px dotted red; */
+}
+.logo {
+  position: absolute;
+  left: 0; top: 15px;
+  transition: .5s;
 }
 .showMenu .hamburger_icon {
   padding: 10px 50px 0 0;
+  transition: .5s;
   cursor: pointer;
 }
+.showMenu .hamburger_icon img {
+  width: 50px;
+}
+
 /* hamburger */
 .hamburger .clickMenu {
   width: 100%; 
