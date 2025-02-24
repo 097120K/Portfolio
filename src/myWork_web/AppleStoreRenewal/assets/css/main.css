@@ -603,7 +603,8 @@ input::placeholder {
   /* outline: 1px dotted red; */
 }
 .item-container-swiper {
-  max-width: 1280px; width: 100%;
+  max-width: 1280px; 
+  width: 100%;
   height: 100%;
   /* outline: 1px dotted red; */
 }
@@ -671,7 +672,6 @@ input::placeholder {
   opacity: 1;
 }
 
-/* 신효진 */
 .rs-quicklinKs {
   width: 100%; max-width: 1280px;
   display: flex;
@@ -752,10 +752,9 @@ input::placeholder {
 }
 .globalfooter-directory-column {
   width: 100%;
-  padding: 0 30px;
-  display: flex;
+  display: flex; gap: 20px;
   justify-content: space-between;
-  align-items: self-start;
+  align-items: start;
   text-align: center;
   /* outline: 1px dotted red; */
 }
@@ -824,6 +823,10 @@ input::placeholder {
   .wrapper_footer {
     padding: 30px;
   }
+  .rs-quicklinKs_item a {
+    padding: 10px;
+    font-size: 13px;
+  }
   .globalfooter-links {
     width: 90%;
     flex-direction: column;
@@ -833,6 +836,23 @@ input::placeholder {
   }
   .gbfooteras-locale {
     margin: 30px 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .rs-quicklinKs_item a {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+  .globalfooter-directory-column {
+    gap: 10px;
+  }
+  .gbfooter-title {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .gbfooter-list {
+    margin-bottom: 20px;
+    font-size: 11px;
   }
 }
 

@@ -39,8 +39,7 @@ var swiper = new Swiper(".item-mySwiper-container", {
 });
 
 var swiper = new Swiper(".item-container-swiper", {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: "auto",
   spaceBetween: 20,
   centeredSlides: false,
   pagination: {
